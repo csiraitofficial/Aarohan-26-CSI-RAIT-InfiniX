@@ -16,6 +16,11 @@ import SimulationNew from "./pages/SimulationNew";
 import SimulationTier1 from "./pages/SimulationTier1";
 import SimulationTier2 from "./pages/SimulationTier2";
 import SimulationComparison from "./pages/SimulationComparison";
+import Emergency from "./pages/Emergency";
+import IncidentManagement from "./pages/IncidentManagement";
+import PersonnelManagement from "./pages/PersonnelManagement";
+import UserDashboard from "./pages/UserDashboard";
+import SystemGuide from "./pages/SystemGuide";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +47,11 @@ const App = () => (
               <Route path="/simulation-tier1" element={<ProtectedRoute><Layout><SimulationTier1 /></Layout></ProtectedRoute>} />
               <Route path="/simulation-tier2" element={<ProtectedRoute><Layout><SimulationTier2 /></Layout></ProtectedRoute>} />
               <Route path="/simulation-comparison" element={<ProtectedRoute><Layout><SimulationComparison /></Layout></ProtectedRoute>} />
+              <Route path="/emergency" element={<ProtectedRoute><Layout><Emergency /></Layout></ProtectedRoute>} />
+              <Route path="/incidents" element={<ProtectedRoute><Layout><IncidentManagement /></Layout></ProtectedRoute>} />
+              <Route path="/personnel" element={<ProtectedRoute><Layout><PersonnelManagement /></Layout></ProtectedRoute>} />
+              <Route path="/user-dashboard" element={<ProtectedRoute><Layout><UserDashboard /></Layout></ProtectedRoute>} />
+              <Route path="/system-guide" element={<ProtectedRoute><Layout><SystemGuide /></Layout></ProtectedRoute>} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
