@@ -31,29 +31,33 @@ const USE_PROXY = isViaTunnel();
 
 /**
  * API Endpoints Configuration
- * Uses relative paths for ngrok (via Vite proxy), absolute URLs for local access
+ * Uses unique proxy prefixes to route to the correct backend ports.
+ * This works on localhost, LAN, and ngrok without code changes.
  */
 export const API_CONFIG = {
-    // CCTV/Monitoring backend (also handles auth now)
-    SIMULATION: USE_PROXY ? '' : `http://${API_HOST}:8785`,
+    // Main simulation backend (MAPPO) - also handles auth
+    SIMULATION: '/api-main',
 
     // Tier 1 Metro City simulation
-    TIER1: USE_PROXY ? '' : `http://${API_HOST}:8767`,
+    TIER1: '/api-tier1',
 
     // Tier 2 District City simulation
-    TIER2: USE_PROXY ? '' : `http://${API_HOST}:8768`,
+    TIER2: '/api-tier2',
 
     // Analytics/LSTM backend
-    ANALYTICS: USE_PROXY ? '' : `http://${API_HOST}:8770`,
+    ANALYTICS: '/api-main', // Shared with main for now
 
     // CCTV/Monitoring backend
-    MONITORING: USE_PROXY ? '' : `http://${API_HOST}:8785`,
+    MONITORING: '/api-cctv',
 
     // Comparison backend
-    COMPARISON: USE_PROXY ? '' : `http://${API_HOST}:8790`,
+    COMPARISON: '/api-main',
 
     // Pothole detection backend
-    POTHOLE: USE_PROXY ? '' : `http://${API_HOST}:8765`,
+    POTHOLE: '/api-pothole',
+
+    // CCTV detection backend (same server as MONITORING)
+    CCTV: '/api-cctv',
 } as const;
 
 /**

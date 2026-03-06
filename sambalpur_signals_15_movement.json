@@ -1,0 +1,2003 @@
+[
+  {
+    "signal_id": "S1",
+    "lat": 19.058976,
+    "lon": 72.864538,
+    "junction_type": "4way",
+    "approaches": [
+      "N",
+      "E",
+      "S",
+      "W"
+    ],
+    "movements": [
+      {
+        "id": "N_S",
+        "from": "N",
+        "to": "S",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "N_E",
+        "from": "N",
+        "to": "E",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "N_W",
+        "from": "N",
+        "to": "W",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "E_W",
+        "from": "E",
+        "to": "W",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "E_N",
+        "from": "E",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "E_S",
+        "from": "E",
+        "to": "S",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "S_W",
+        "from": "S",
+        "to": "W",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_E",
+        "from": "S",
+        "to": "E",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "W_E",
+        "from": "W",
+        "to": "E",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "W_S",
+        "from": "W",
+        "to": "S",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "W_N",
+        "from": "W",
+        "to": "N",
+        "type": "left",
+        "lane_count": 1
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_NS_through",
+        "allowed_movements": [
+          "N_S",
+          "S_N"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_EW_through",
+        "allowed_movements": [
+          "E_W",
+          "W_E"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P2_NS_rights",
+        "allowed_movements": [
+          "N_E",
+          "S_W"
+        ],
+        "recommended_green_s": 8,
+        "min_green_s": 6,
+        "max_green_s": 15
+      },
+      {
+        "id": "P3_EW_rights",
+        "allowed_movements": [
+          "E_S",
+          "W_N"
+        ],
+        "recommended_green_s": 8,
+        "min_green_s": 6,
+        "max_green_s": 15
+      },
+      {
+        "id": "P4_lefts",
+        "allowed_movements": [
+          "N_W",
+          "E_S",
+          "S_E",
+          "W_N"
+        ],
+        "recommended_green_s": 6,
+        "min_green_s": 6,
+        "max_green_s": 12
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "S": 0.7,
+        "E": 0.2,
+        "W": 0.1
+      },
+      "E": {
+        "W": 0.6,
+        "N": 0.2,
+        "S": 0.2
+      },
+      "S": {
+        "N": 0.65,
+        "E": 0.25,
+        "W": 0.1
+      },
+      "W": {
+        "E": 0.6,
+        "S": 0.3,
+        "N": 0.1
+      }
+    },
+    "downstream_links": [
+      {
+        "signal": "S2",
+        "distance_m": 400,
+        "travel_time_s": 60
+      }
+    ],
+    "arrival_fraction_mean": 0.7
+  },
+  {
+    "signal_id": "S2",
+    "lat": 19.060484,
+    "lon": 72.858603,
+    "junction_type": "4way",
+    "approaches": [
+      "N",
+      "E",
+      "S",
+      "W"
+    ],
+    "movements": [
+      {
+        "id": "N_S",
+        "from": "N",
+        "to": "S",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "N_E",
+        "from": "N",
+        "to": "E",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "N_W",
+        "from": "N",
+        "to": "W",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "E_W",
+        "from": "E",
+        "to": "W",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "E_N",
+        "from": "E",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "E_S",
+        "from": "E",
+        "to": "S",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "S_W",
+        "from": "S",
+        "to": "W",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_E",
+        "from": "S",
+        "to": "E",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "W_E",
+        "from": "W",
+        "to": "E",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "W_S",
+        "from": "W",
+        "to": "S",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "W_N",
+        "from": "W",
+        "to": "N",
+        "type": "left",
+        "lane_count": 1
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_NS_through",
+        "allowed_movements": [
+          "N_S",
+          "S_N"
+        ],
+        "recommended_green_s": 32,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_EW_through",
+        "allowed_movements": [
+          "E_W",
+          "W_E"
+        ],
+        "recommended_green_s": 28,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P2_NS_rights",
+        "allowed_movements": [
+          "N_E",
+          "S_W"
+        ],
+        "recommended_green_s": 8,
+        "min_green_s": 6,
+        "max_green_s": 15
+      },
+      {
+        "id": "P3_EW_rights",
+        "allowed_movements": [
+          "E_S",
+          "W_N"
+        ],
+        "recommended_green_s": 8,
+        "min_green_s": 6,
+        "max_green_s": 15
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "S": 0.68,
+        "E": 0.22,
+        "W": 0.1
+      },
+      "E": {
+        "W": 0.62,
+        "N": 0.18,
+        "S": 0.2
+      },
+      "S": {
+        "N": 0.7,
+        "E": 0.2,
+        "W": 0.1
+      },
+      "W": {
+        "E": 0.58,
+        "S": 0.32,
+        "N": 0.1
+      }
+    },
+    "downstream_links": [
+      {
+        "signal": "S3",
+        "distance_m": 500,
+        "travel_time_s": 75
+      }
+    ],
+    "arrival_fraction_mean": 0.7
+  },
+  {
+    "signal_id": "S3",
+    "lat": 19.060641,
+    "lon": 72.858577,
+    "junction_type": "4way",
+    "approaches": [
+      "N",
+      "E",
+      "S",
+      "W"
+    ],
+    "movements": [
+      {
+        "id": "N_S",
+        "from": "N",
+        "to": "S",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "N_E",
+        "from": "N",
+        "to": "E",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "N_W",
+        "from": "N",
+        "to": "W",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "E_W",
+        "from": "E",
+        "to": "W",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "E_N",
+        "from": "E",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "E_S",
+        "from": "E",
+        "to": "S",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "S_W",
+        "from": "S",
+        "to": "W",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_E",
+        "from": "S",
+        "to": "E",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "W_E",
+        "from": "W",
+        "to": "E",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "W_S",
+        "from": "W",
+        "to": "S",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "W_N",
+        "from": "W",
+        "to": "N",
+        "type": "left",
+        "lane_count": 1
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_NS_through",
+        "allowed_movements": [
+          "N_S",
+          "S_N"
+        ],
+        "recommended_green_s": 28,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_EW_through",
+        "allowed_movements": [
+          "E_W",
+          "W_E"
+        ],
+        "recommended_green_s": 28,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P2_NS_rights",
+        "allowed_movements": [
+          "N_E",
+          "S_W"
+        ],
+        "recommended_green_s": 7,
+        "min_green_s": 6,
+        "max_green_s": 15
+      },
+      {
+        "id": "P3_EW_rights",
+        "allowed_movements": [
+          "E_S",
+          "W_N"
+        ],
+        "recommended_green_s": 7,
+        "min_green_s": 6,
+        "max_green_s": 15
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "S": 0.7,
+        "E": 0.2,
+        "W": 0.1
+      },
+      "E": {
+        "W": 0.65,
+        "N": 0.2,
+        "S": 0.15
+      },
+      "S": {
+        "N": 0.66,
+        "E": 0.24,
+        "W": 0.1
+      },
+      "W": {
+        "E": 0.6,
+        "S": 0.3,
+        "N": 0.1
+      }
+    },
+    "downstream_links": [
+      {
+        "signal": "S4",
+        "distance_m": 500,
+        "travel_time_s": 75
+      },
+      {
+        "signal": "S7",
+        "distance_m": 600,
+        "travel_time_s": 90
+      }
+    ],
+    "arrival_fraction_mean": 0.72
+  },
+  {
+    "signal_id": "S4",
+    "lat": 19.06202,
+    "lon": 72.883435,
+    "junction_type": "4way",
+    "approaches": [
+      "N",
+      "E",
+      "S",
+      "W"
+    ],
+    "movements": [
+      {
+        "id": "N_S",
+        "from": "N",
+        "to": "S",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "N_E",
+        "from": "N",
+        "to": "E",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "N_W",
+        "from": "N",
+        "to": "W",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "E_W",
+        "from": "E",
+        "to": "W",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "E_N",
+        "from": "E",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "E_S",
+        "from": "E",
+        "to": "S",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "S_W",
+        "from": "S",
+        "to": "W",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_E",
+        "from": "S",
+        "to": "E",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "W_E",
+        "from": "W",
+        "to": "E",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "W_S",
+        "from": "W",
+        "to": "S",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "W_N",
+        "from": "W",
+        "to": "N",
+        "type": "left",
+        "lane_count": 1
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_NS_through",
+        "allowed_movements": [
+          "N_S",
+          "S_N"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_EW_through",
+        "allowed_movements": [
+          "E_W",
+          "W_E"
+        ],
+        "recommended_green_s": 26,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P2_rights",
+        "allowed_movements": [
+          "N_E",
+          "S_W",
+          "E_N",
+          "W_S"
+        ],
+        "recommended_green_s": 10,
+        "min_green_s": 6,
+        "max_green_s": 20
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "S": 0.68,
+        "E": 0.22,
+        "W": 0.1
+      },
+      "E": {
+        "W": 0.6,
+        "N": 0.2,
+        "S": 0.2
+      },
+      "S": {
+        "N": 0.66,
+        "E": 0.24,
+        "W": 0.1
+      },
+      "W": {
+        "E": 0.58,
+        "S": 0.32,
+        "N": 0.1
+      }
+    },
+    "downstream_links": [
+      {
+        "signal": "S5",
+        "distance_m": 500,
+        "travel_time_s": 75
+      }
+    ],
+    "arrival_fraction_mean": 0.72
+  },
+  {
+    "signal_id": "S5",
+    "lat": 19.06211,
+    "lon": 72.873093,
+    "junction_type": "4way",
+    "approaches": [
+      "N",
+      "E",
+      "S",
+      "W"
+    ],
+    "movements": [
+      {
+        "id": "N_S",
+        "from": "N",
+        "to": "S",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "N_E",
+        "from": "N",
+        "to": "E",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "N_W",
+        "from": "N",
+        "to": "W",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "E_W",
+        "from": "E",
+        "to": "W",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "E_N",
+        "from": "E",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "E_S",
+        "from": "E",
+        "to": "S",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "S_W",
+        "from": "S",
+        "to": "W",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_E",
+        "from": "S",
+        "to": "E",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "W_E",
+        "from": "W",
+        "to": "E",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "W_S",
+        "from": "W",
+        "to": "S",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "W_N",
+        "from": "W",
+        "to": "N",
+        "type": "left",
+        "lane_count": 1
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_NS_through",
+        "allowed_movements": [
+          "N_S",
+          "S_N"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_EW_through",
+        "allowed_movements": [
+          "E_W",
+          "W_E"
+        ],
+        "recommended_green_s": 24,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P2_rights_and_lefts",
+        "allowed_movements": [
+          "N_E",
+          "S_W",
+          "N_W",
+          "S_E"
+        ],
+        "recommended_green_s": 10,
+        "min_green_s": 6,
+        "max_green_s": 20
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "S": 0.6,
+        "E": 0.25,
+        "W": 0.15
+      },
+      "E": {
+        "W": 0.62,
+        "N": 0.18,
+        "S": 0.2
+      },
+      "S": {
+        "N": 0.65,
+        "E": 0.25,
+        "W": 0.1
+      },
+      "W": {
+        "E": 0.6,
+        "S": 0.3,
+        "N": 0.1
+      }
+    },
+    "downstream_links": [
+      {
+        "signal": "S6",
+        "distance_m": 600,
+        "travel_time_s": 90
+      }
+    ],
+    "arrival_fraction_mean": 0.7
+  },
+  {
+    "signal_id": "S6",
+    "lat": 19.062456,
+    "lon": 72.859579,
+    "junction_type": "T/Y",
+    "approaches": [
+      "N",
+      "E",
+      "S"
+    ],
+    "movements": [
+      {
+        "id": "N_E",
+        "from": "N",
+        "to": "E",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "N_W",
+        "from": "N",
+        "to": "W",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "E_N",
+        "from": "E",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_N_to_WE",
+        "allowed_movements": [
+          "N_E",
+          "N_W"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_WE_to_N",
+        "allowed_movements": [
+          "E_N",
+          "S_N"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "E": 0.6,
+        "W": 0.4
+      },
+      "E": {
+        "N": 1.0
+      },
+      "S": {
+        "N": 1.0
+      }
+    },
+    "downstream_links": [],
+    "arrival_fraction_mean": 0.68
+  },
+  {
+    "signal_id": "S7",
+    "lat": 19.065173,
+    "lon": 72.862195,
+    "junction_type": "T/Y",
+    "approaches": [
+      "W",
+      "E",
+      "S"
+    ],
+    "movements": [
+      {
+        "id": "W_E",
+        "from": "W",
+        "to": "E",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "W_S",
+        "from": "W",
+        "to": "S",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "E_W",
+        "from": "E",
+        "to": "W",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "E_S",
+        "from": "E",
+        "to": "S",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "S_W",
+        "from": "S",
+        "to": "W",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_E",
+        "from": "S",
+        "to": "E",
+        "type": "left",
+        "lane_count": 1
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_WE_through",
+        "allowed_movements": [
+          "W_E",
+          "E_W"
+        ],
+        "recommended_green_s": 32,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_S_turns",
+        "allowed_movements": [
+          "S_W",
+          "S_E"
+        ],
+        "recommended_green_s": 20,
+        "min_green_s": 6,
+        "max_green_s": 40
+      }
+    ],
+    "turning_ratios": {
+      "W": {
+        "E": 0.7,
+        "S": 0.3
+      },
+      "E": {
+        "W": 0.6,
+        "S": 0.4
+      },
+      "S": {
+        "W": 0.5,
+        "E": 0.5
+      }
+    },
+    "downstream_links": [
+      {
+        "signal": "S8",
+        "distance_m": 600,
+        "travel_time_s": 90
+      }
+    ],
+    "arrival_fraction_mean": 0.71
+  },
+  {
+    "signal_id": "S8",
+    "lat": 19.067161,
+    "lon": 72.865398,
+    "junction_type": "4way",
+    "approaches": [
+      "N",
+      "E",
+      "S",
+      "W"
+    ],
+    "movements": [
+      {
+        "id": "N_S",
+        "from": "N",
+        "to": "S",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "N_W",
+        "from": "N",
+        "to": "W",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "N_E",
+        "from": "N",
+        "to": "E",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "E_W",
+        "from": "E",
+        "to": "W",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "E_S",
+        "from": "E",
+        "to": "S",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "E_N",
+        "from": "E",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "S_E",
+        "from": "S",
+        "to": "E",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_W",
+        "from": "S",
+        "to": "W",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "W_E",
+        "from": "W",
+        "to": "E",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "W_S",
+        "from": "W",
+        "to": "S",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "W_N",
+        "from": "W",
+        "to": "N",
+        "type": "left",
+        "lane_count": 1
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_NS_through",
+        "allowed_movements": [
+          "N_S",
+          "S_N"
+        ],
+        "recommended_green_s": 28,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_EW_through",
+        "allowed_movements": [
+          "E_W",
+          "W_E"
+        ],
+        "recommended_green_s": 28,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P2_rights",
+        "allowed_movements": [
+          "N_E",
+          "S_W",
+          "E_N",
+          "W_S"
+        ],
+        "recommended_green_s": 10,
+        "min_green_s": 6,
+        "max_green_s": 20
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "S": 0.7,
+        "E": 0.2,
+        "W": 0.1
+      },
+      "E": {
+        "W": 0.62,
+        "N": 0.18,
+        "S": 0.2
+      },
+      "S": {
+        "N": 0.66,
+        "E": 0.24,
+        "W": 0.1
+      },
+      "W": {
+        "E": 0.6,
+        "S": 0.3,
+        "N": 0.1
+      }
+    },
+    "downstream_links": [
+      {
+        "signal": "S9",
+        "distance_m": 800,
+        "travel_time_s": 120
+      }
+    ],
+    "arrival_fraction_mean": 0.73
+  },
+  {
+    "signal_id": "S9",
+    "lat": 19.069087,
+    "lon": 72.8685,
+    "junction_type": "4way",
+    "approaches": [
+      "N",
+      "E",
+      "S",
+      "W"
+    ],
+    "movements": [
+      {
+        "id": "N_S",
+        "from": "N",
+        "to": "S",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "N_E",
+        "from": "N",
+        "to": "E",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "N_W",
+        "from": "N",
+        "to": "W",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "E_W",
+        "from": "E",
+        "to": "W",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "E_N",
+        "from": "E",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "E_S",
+        "from": "E",
+        "to": "S",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "S_W",
+        "from": "S",
+        "to": "W",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_E",
+        "from": "S",
+        "to": "E",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "W_E",
+        "from": "W",
+        "to": "E",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "W_S",
+        "from": "W",
+        "to": "S",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "W_N",
+        "from": "W",
+        "to": "N",
+        "type": "left",
+        "lane_count": 1
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_NS_through",
+        "allowed_movements": [
+          "N_S",
+          "S_N"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_EW_through",
+        "allowed_movements": [
+          "E_W",
+          "W_E"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P2_rights",
+        "allowed_movements": [
+          "N_E",
+          "S_W",
+          "E_N",
+          "W_S"
+        ],
+        "recommended_green_s": 10,
+        "min_green_s": 6,
+        "max_green_s": 20
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "S": 0.7,
+        "E": 0.2,
+        "W": 0.1
+      },
+      "E": {
+        "W": 0.6,
+        "N": 0.2,
+        "S": 0.2
+      },
+      "S": {
+        "N": 0.7,
+        "E": 0.2,
+        "W": 0.1
+      },
+      "W": {
+        "E": 0.6,
+        "S": 0.3,
+        "N": 0.1
+      }
+    },
+    "downstream_links": [
+      {
+        "signal": "S10",
+        "distance_m": 800,
+        "travel_time_s": 120
+      }
+    ],
+    "arrival_fraction_mean": 0.75
+  },
+  {
+    "signal_id": "S10",
+    "lat": 19.071008,
+    "lon": 72.8723,
+    "junction_type": "4way",
+    "approaches": [
+      "N",
+      "E",
+      "S",
+      "W"
+    ],
+    "movements": [
+      {
+        "id": "N_S",
+        "from": "N",
+        "to": "S",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "N_E",
+        "from": "N",
+        "to": "E",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "N_W",
+        "from": "N",
+        "to": "W",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "E_W",
+        "from": "E",
+        "to": "W",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "E_N",
+        "from": "E",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "E_S",
+        "from": "E",
+        "to": "S",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "S_W",
+        "from": "S",
+        "to": "W",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_E",
+        "from": "S",
+        "to": "E",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "W_E",
+        "from": "W",
+        "to": "E",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "W_S",
+        "from": "W",
+        "to": "S",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "W_N",
+        "from": "W",
+        "to": "N",
+        "type": "left",
+        "lane_count": 1
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_NS_through",
+        "allowed_movements": [
+          "N_S",
+          "S_N"
+        ],
+        "recommended_green_s": 28,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_EW_through",
+        "allowed_movements": [
+          "E_W",
+          "W_E"
+        ],
+        "recommended_green_s": 28,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P2_rights",
+        "allowed_movements": [
+          "N_E",
+          "S_W",
+          "E_N",
+          "W_S"
+        ],
+        "recommended_green_s": 10,
+        "min_green_s": 6,
+        "max_green_s": 20
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "S": 0.68,
+        "E": 0.22,
+        "W": 0.1
+      },
+      "E": {
+        "W": 0.62,
+        "N": 0.18,
+        "S": 0.2
+      },
+      "S": {
+        "N": 0.66,
+        "E": 0.24,
+        "W": 0.1
+      },
+      "W": {
+        "E": 0.6,
+        "S": 0.3,
+        "N": 0.1
+      }
+    },
+    "downstream_links": [
+      {
+        "signal": "S11",
+        "distance_m": 900,
+        "travel_time_s": 135
+      }
+    ],
+    "arrival_fraction_mean": 0.75
+  },
+  {
+    "signal_id": "S11",
+    "lat": 19.074523,
+    "lon": 72.870865,
+    "junction_type": "4way",
+    "approaches": [
+      "N",
+      "E",
+      "S",
+      "W"
+    ],
+    "movements": [
+      {
+        "id": "N_S",
+        "from": "N",
+        "to": "S",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "N_E",
+        "from": "N",
+        "to": "E",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "N_W",
+        "from": "N",
+        "to": "W",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "E_W",
+        "from": "E",
+        "to": "W",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "E_N",
+        "from": "E",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "E_S",
+        "from": "E",
+        "to": "S",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "S_W",
+        "from": "S",
+        "to": "W",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_E",
+        "from": "S",
+        "to": "E",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "W_E",
+        "from": "W",
+        "to": "E",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "W_S",
+        "from": "W",
+        "to": "S",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "W_N",
+        "from": "W",
+        "to": "N",
+        "type": "left",
+        "lane_count": 1
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_NS_through",
+        "allowed_movements": [
+          "N_S",
+          "S_N"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_EW_through",
+        "allowed_movements": [
+          "E_W",
+          "W_E"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P2_rights",
+        "allowed_movements": [
+          "N_E",
+          "S_W",
+          "E_N",
+          "W_S"
+        ],
+        "recommended_green_s": 10,
+        "min_green_s": 6,
+        "max_green_s": 20
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "S": 0.7,
+        "E": 0.2,
+        "W": 0.1
+      },
+      "E": {
+        "W": 0.6,
+        "N": 0.2,
+        "S": 0.2
+      },
+      "S": {
+        "N": 0.7,
+        "E": 0.2,
+        "W": 0.1
+      },
+      "W": {
+        "E": 0.6,
+        "S": 0.3,
+        "N": 0.1
+      }
+    },
+    "downstream_links": [
+      {
+        "signal": "S12",
+        "distance_m": 900,
+        "travel_time_s": 135
+      }
+    ],
+    "arrival_fraction_mean": 0.76
+  },
+  {
+    "signal_id": "S12",
+    "lat": 19.075879,
+    "lon": 72.877359,
+    "junction_type": "T/Y",
+    "approaches": [
+      "N",
+      "W",
+      "S"
+    ],
+    "movements": [
+      {
+        "id": "N_W",
+        "from": "N",
+        "to": "W",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "N_S",
+        "from": "N",
+        "to": "S",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "W_N",
+        "from": "W",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_N_to_WS",
+        "allowed_movements": [
+          "N_W",
+          "N_S"
+        ],
+        "recommended_green_s": 32,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_WS_to_N",
+        "allowed_movements": [
+          "W_N",
+          "S_N"
+        ],
+        "recommended_green_s": 28,
+        "min_green_s": 20,
+        "max_green_s": 60
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "W": 0.65,
+        "S": 0.35
+      },
+      "W": {
+        "N": 1.0
+      },
+      "S": {
+        "N": 1.0
+      }
+    },
+    "downstream_links": [],
+    "arrival_fraction_mean": 0.76
+  },
+  {
+    "signal_id": "S13",
+    "lat": 19.077737,
+    "lon": 72.87887,
+    "junction_type": "T/Y",
+    "approaches": [
+      "N",
+      "E",
+      "S"
+    ],
+    "movements": [
+      {
+        "id": "N_S",
+        "from": "N",
+        "to": "S",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "N_E",
+        "from": "N",
+        "to": "E",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "E_N",
+        "from": "E",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_N_to_ES",
+        "allowed_movements": [
+          "N_S",
+          "N_E"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_ES_to_N",
+        "allowed_movements": [
+          "E_N",
+          "S_N"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "S": 0.7,
+        "E": 0.3
+      },
+      "E": {
+        "N": 1.0
+      },
+      "S": {
+        "N": 1.0
+      }
+    },
+    "downstream_links": [
+      {
+        "signal": "S4",
+        "distance_m": 800,
+        "travel_time_s": 120
+      }
+    ],
+    "arrival_fraction_mean": 0.69
+  },
+  {
+    "signal_id": "S14",
+    "lat": 19.077815,
+    "lon": 72.862472,
+    "junction_type": "T/Y",
+    "approaches": [
+      "N",
+      "E",
+      "S"
+    ],
+    "movements": [
+      {
+        "id": "N_S",
+        "from": "N",
+        "to": "S",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "N_E",
+        "from": "N",
+        "to": "E",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "E_N",
+        "from": "E",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_N_to_ES",
+        "allowed_movements": [
+          "N_S",
+          "N_E"
+        ],
+        "recommended_green_s": 28,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_ES_to_N",
+        "allowed_movements": [
+          "E_N",
+          "S_N"
+        ],
+        "recommended_green_s": 28,
+        "min_green_s": 20,
+        "max_green_s": 60
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "S": 0.7,
+        "E": 0.3
+      },
+      "E": {
+        "N": 1.0
+      },
+      "S": {
+        "N": 1.0
+      }
+    },
+    "downstream_links": [
+      {
+        "signal": "S5",
+        "distance_m": 500,
+        "travel_time_s": 75
+      }
+    ],
+    "arrival_fraction_mean": 0.69
+  },
+  {
+    "signal_id": "S15",
+    "lat": 19.079653,
+    "lon": 72.880324,
+    "junction_type": "T/Y",
+    "approaches": [
+      "N",
+      "W",
+      "S"
+    ],
+    "movements": [
+      {
+        "id": "N_S",
+        "from": "N",
+        "to": "S",
+        "type": "through",
+        "lane_count": 2
+      },
+      {
+        "id": "N_W",
+        "from": "N",
+        "to": "W",
+        "type": "left",
+        "lane_count": 1
+      },
+      {
+        "id": "W_N",
+        "from": "W",
+        "to": "N",
+        "type": "right",
+        "lane_count": 1
+      },
+      {
+        "id": "S_N",
+        "from": "S",
+        "to": "N",
+        "type": "through",
+        "lane_count": 2
+      }
+    ],
+    "phases": [
+      {
+        "id": "P0_N_to_WS",
+        "allowed_movements": [
+          "N_S",
+          "N_W"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      },
+      {
+        "id": "P1_WS_to_N",
+        "allowed_movements": [
+          "W_N",
+          "S_N"
+        ],
+        "recommended_green_s": 30,
+        "min_green_s": 20,
+        "max_green_s": 60
+      }
+    ],
+    "turning_ratios": {
+      "N": {
+        "S": 0.6,
+        "W": 0.4
+      },
+      "W": {
+        "N": 1.0
+      },
+      "S": {
+        "N": 1.0
+      }
+    },
+    "downstream_links": [
+      {
+        "signal": "S5",
+        "distance_m": 500,
+        "travel_time_s": 75
+      }
+    ],
+    "arrival_fraction_mean": 0.69
+  }
+]

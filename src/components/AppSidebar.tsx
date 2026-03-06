@@ -23,8 +23,20 @@ export function AppSidebar({ userRole, onLogout }: AppSidebarProps) {
   const { t } = useTranslation();
 
   const menuItems = [
-    { title: t("common.dashboard"), url: "/dashboard", icon: LayoutDashboard, roles: ["admin", "operator"] },
-    { title: t("common.cctvMonitoring"), url: "/monitoring", icon: Video, roles: ["admin", "operator"] },
+    { title: t("common.dashboard"), url: "/dashboard", icon: LayoutDashboard, roles: ["admin"] },
+    { title: t("common.incidents"), url: "/incidents", icon: MapPin, roles: ["admin"] },
+    { title: t("common.signalControl"), url: "/signal-control", icon: Zap, roles: ["admin"] },
+    { title: t("common.personnel"), url: "/personnel", icon: UserCheck, roles: ["admin"] },
+    { title: t("common.mappoSim"), url: "/simulation-new", icon: Play, roles: ["admin"] },
+    { title: t("common.tier1Sim") + " (35)", url: "/simulation-tier1", icon: Building, roles: ["admin"] },
+    { title: t("common.tier2Sim") + " (45)", url: "/simulation-tier2", icon: Building2, roles: ["admin"] },
+    { title: t("common.cctvMonitoring"), url: "/monitoring", icon: Video, roles: ["admin"] },
+    { title: t("common.emergency"), url: "/emergency", icon: Siren, roles: ["admin"] },
+    { title: t("common.analytics"), url: "/analytics", icon: LineChart, roles: ["admin"] },
+    { title: t("common.reportIncident"), url: "/user-dashboard", icon: AlertTriangle, roles: ["user"] },
+    { title: t("common.reportPothole"), url: "/report-pothole", icon: Construction, roles: ["user"] },
+    // Allow both admin and user roles to access AI pothole detection so they can raise alerts
+    { title: t("common.potholeDetection"), url: "/pothole-detection", icon: AlertTriangle, roles: ["admin", "user"] },
   ];
 
   const filteredItems = menuItems.filter(item => item.roles.includes(userRole));
