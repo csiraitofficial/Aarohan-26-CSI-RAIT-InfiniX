@@ -1,4 +1,4 @@
-# FlowMasters 🚦
+# Yatayat By INFINIX 🚦
 
 An AI-powered Intelligent Traffic Management System designed for Smart City Traffic Control and Optimization.
 
