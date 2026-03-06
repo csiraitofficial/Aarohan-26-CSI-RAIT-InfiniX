@@ -1,0 +1,205 @@
+[
+    {
+      "signal_id": "S1",
+      "lat": 21.54,
+      "lon": 83.98,
+      "junction_type": "4way",
+      "approaches": ["N", "S", "E", "W"],
+      "upstream_links": [],
+      "downstream_links": [
+        {"signal": "S2", "distance_m": 400, "travel_time_s": 60}
+      ],
+      "arrival_fraction_mean": 0.70
+    },
+    {
+      "signal_id": "S2",
+      "lat": 21.535,
+      "lon": 83.98,
+      "junction_type": "44ay",
+      "approaches": ["N", "S", "E", "W"],
+      "upstream_links": [
+        {"signal": "S1", "distance_m": 400, "travel_time_s": 60}
+      ],
+      "downstream_links": [
+        {"signal": "S3", "distance_m": 500, "travel_time_s": 75}
+      ],
+      "arrival_fraction_mean": 0.70
+    },
+    {
+      "signal_id": "S3",
+      "lat": 21.53,
+      "lon": 83.98,
+      "junction_type": "4way",
+      "approaches": ["N", "S", "E", "W"],
+      "upstream_links": [
+        {"signal": "S2", "distance_m": 500, "travel_time_s": 75}
+      ],
+      "downstream_links": [
+        {"signal": "S4", "distance_m": 500, "travel_time_s": 75},
+        {"signal": "S7", "distance_m": 600, "travel_time_s": 90}
+      ],
+      "arrival_fraction_mean": 0.72
+    },
+    {
+      "signal_id": "S4",
+      "lat": 21.525,
+      "lon": 83.98,
+      "junction_type": "4way",
+      "approaches": ["N", "S", "E", "W"],
+      "upstream_links": [
+        {"signal": "S3", "distance_m": 500, "travel_time_s": 75},
+        {"signal": "S13", "distance_m": 800, "travel_time_s": 120}
+      ],
+      "downstream_links": [
+        {"signal": "S5", "distance_m": 500, "travel_time_s": 75}
+      ],
+      "arrival_fraction_mean": 0.72
+    },
+    {
+      "signal_id": "S5",
+      "lat": 21.52,
+      "lon": 83.98,
+      "junction_type": "4way",
+      "approaches": ["N", "S", "E", "W"],
+      "upstream_links": [
+        {"signal": "S4", "distance_m": 500, "travel_time_s": 75},
+        {"signal": "S14", "distance_m": 500, "travel_time_s": 75},
+        {"signal": "S15", "distance_m": 500, "travel_time_s": 75}
+      ],
+      "downstream_links": [
+        {"signal": "S6", "distance_m": 600, "travel_time_s": 90}
+      ],
+      "arrival_fraction_mean": 0.70
+    },
+    {
+      "signal_id": "S6",
+      "lat": 21.515,
+      "lon": 83.98,
+      "junction_type": "T/Y",
+      "approaches": ["N", "E", "S"],
+      "upstream_links": [
+        {"signal": "S5", "distance_m": 600, "travel_time_s": 90}
+      ],
+      "downstream_links": [],
+      "arrival_fraction_mean": 0.68
+    },
+    {
+      "signal_id": "S7",
+      "lat": 21.53,
+      "lon": 83.99,
+      "junction_type": "T/Y",
+      "approaches": ["W", "E", "S"],
+      "upstream_links": [
+        {"signal": "S3", "distance_m": 600, "travel_time_s": 90}
+      ],
+      "downstream_links": [
+        {"signal": "S8", "distance_m": 600, "travel_time_s": 90}
+      ],
+      "arrival_fraction_mean": 0.71
+    },
+    {
+      "signal_id": "S8",
+      "lat": 21.53,
+      "lon": 84.0,
+      "junction_type": "4way",
+      "approaches": ["N", "S", "E", "W"],
+      "upstream_links": [
+        {"signal": "S7", "distance_m": 600, "travel_time_s": 90}
+      ],
+      "downstream_links": [
+        {"signal": "S9", "distance_m": 800, "travel_time_s": 120}
+      ],
+      "arrival_fraction_mean": 0.73
+    },
+    {
+      "signal_id": "S9",
+      "lat": 21.53,
+      "lon": 84.01,
+      "junction_type": "4way",
+      "approaches": ["N", "S", "E", "W"],
+      "upstream_links": [
+        {"signal": "S8", "distance_m": 800, "travel_time_s": 120}
+      ],
+      "downstream_links": [
+        {"signal": "S10", "distance_m": 800, "travel_time_s": 120}
+      ],
+      "arrival_fraction_mean": 0.75
+    },
+    {
+      "signal_id": "S10",
+      "lat": 21.525,
+      "lon": 84.02,
+      "junction_type": "4way",
+      "approaches": ["N", "S", "E", "W"],
+      "upstream_links": [
+        {"signal": "S9", "distance_m": 800, "travel_time_s": 120}
+      ],
+      "downstream_links": [
+        {"signal": "S11", "distance_m": 900, "travel_time_s": 135}
+      ],
+      "arrival_fraction_mean": 0.75
+    },
+    {
+      "signal_id": "S11",
+      "lat": 21.52,
+      "lon": 84.028,
+      "junction_type": "4way",
+      "approaches": ["N", "S", "E", "W"],
+      "upstream_links": [
+        {"signal": "S10", "distance_m": 900, "travel_time_s": 135}
+      ],
+      "downstream_links": [
+        {"signal": "S12", "distance_m": 900, "travel_time_s": 135}
+      ],
+      "arrival_fraction_mean": 0.76
+    },
+    {
+      "signal_id": "S12",
+      "lat": 21.515,
+      "lon": 84.035,
+      "junction_type": "T/Y",
+      "approaches": ["N", "W", "S"],
+      "upstream_links": [
+        {"signal": "S11", "distance_m": 900, "travel_time_s": 135}
+      ],
+      "downstream_links": [],
+      "arrival_fraction_mean": 0.76
+    },
+    {
+      "signal_id": "S13",
+      "lat": 21.53,
+      "lon": 83.965,
+      "junction_type": "T/Y",
+      "approaches": ["N", "E", "S"],
+      "upstream_links": [],
+      "downstream_links": [
+        {"signal": "S4", "distance_m": 800, "travel_time_s": 120}
+      ],
+      "arrival_fraction_mean": 0.69
+    },
+    {
+      "signal_id": "S14",
+      "lat": 21.515,
+      "lon": 83.975,
+      "junction_type": "T/Y",
+      "approaches": ["N", "E", "S"],
+      "upstream_links": [],
+      "downstream_links": [
+        {"signal": "S5", "distance_m": 500, "travel_time_s": 75}
+      ],
+      "arrival_fraction_mean": 0.69
+    },
+    {
+      "signal_id": "S15",
+      "lat": 21.515,
+      "lon": 83.985,
+      "junction_type": "T/Y",
+      "approaches": ["N", "W", "S"],
+      "upstream_links": [],
+      "downstream_links": [
+        {"signal": "S5", "distance_m": 500, "travel_time_s": 75}
+      ],
+      "arrival_fraction_mean": 0.69
+    }
+  ]
+  

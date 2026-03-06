@@ -1,0 +1,8 @@
+model,metric,value
+fixed_time_baseline,mean_queue,0.5352495908737183
+fixed_time_baseline,max_queue,0.8837456464767456
+fixed_time_baseline,steady_queue,0.7145355701446533
+fixed_time_baseline,spillback_rate,0.07319490740740742
+fixed_time_baseline,episodes,5.0
+fixed_time_baseline,steps_per_episode,3600.0
+    

@@ -1,0 +1,7 @@
+model,metric,value
+rl_policy,mean_queue,0.49281768798828124
+rl_policy,max_queue,0.8259577751159668
+rl_policy,steady_queue,0.6545117497444153
+rl_policy,spillback_rate,0.060685185185185175
+rl_policy,episodes,5.0
+rl_policy,steps_per_episode,3600.0

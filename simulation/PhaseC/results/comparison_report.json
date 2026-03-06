@@ -1,0 +1,31 @@
+{
+  "summary": [
+    {
+      "method": "Simple_Fixed",
+      "mean_queue": 1.9599063632786276,
+      "max_queue": 3.6980960369110103,
+      "steady_queue": 2.7918386097749077,
+      "spillback_rate": 0.1179
+    },
+    {
+      "method": "Traffic_Opt",
+      "mean_queue": 1.9004798187538985,
+      "max_queue": 3.610771059989929,
+      "steady_queue": 2.7110091146826742,
+      "spillback_rate": 0.1195499999999999
+    },
+    {
+      "method": "MAPPO",
+      "mean_queue": 1.945014544725418,
+      "max_queue": 3.6578837633132935,
+      "steady_queue": 2.7612201466163,
+      "spillback_rate": 0.1113166666666666
+    }
+  ],
+  "improvement": {
+    "traffic_opt_vs_simple": 3.0321114129818643,
+    "mappo_vs_simple": 0.7598229605366391,
+    "mappo_vs_traffic_opt": -2.3433411674279094
+  },
+  "winner": "Traffic_Opt"
+}
