@@ -1,0 +1,14 @@
+numpy
+scipy
+matplotlib
+pandas
+tqdm
+gymnasium
+ray[rllib]
+protobuf==3.20.*
+osmnx
+geopandas
+shapely
+folium
+networkx
+ 

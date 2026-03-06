@@ -1,0 +1,37 @@
+{
+  "summary": [
+    {
+      "method": "MAPPO",
+      "mean_queue": 1.165354722764757,
+      "max_queue": 2.511029052734375,
+      "steady_queue": 1.165354722764757,
+      "spillback_rate": 0.028388888888888887
+    },
+    {
+      "method": "Traffic_Opt",
+      "mean_queue": 1.1839125464757283,
+      "max_queue": 2.496723175048828,
+      "steady_queue": 1.1839125464757283,
+      "spillback_rate": 0.026902777777777775
+    },
+    {
+      "method": "Simple_Fixed",
+      "mean_queue": 1.1530848861005574,
+      "max_queue": 2.485773213704427,
+      "steady_queue": 1.1530848861005574,
+      "spillback_rate": 0.03079166666666667
+    }
+  ],
+  "improvement": {
+    "traffic_opt_vs_simple": -2.6734944449252396,
+    "mappo_vs_simple": -1.0640878925829182,
+    "mappo_vs_traffic_opt": 1.5674995392366022
+  },
+  "config": {
+    "model_path": "checkpoints_movement/policy_shared_final.pt",
+    "json_path": "sambalpur_signals_15_movement.json",
+    "episodes": 1,
+    "steps": 600,
+    "n_envs": 8
+  }
+}
