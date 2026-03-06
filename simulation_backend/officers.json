@@ -1,0 +1,197 @@
+[
+    {
+        "id": "OFF-001",
+        "name": "Rajesh Kumar",
+        "badgeNumber": "TF-1001",
+        "rank": "Inspector",
+        "status": "on-duty",
+        "location": {
+            "coordinates": [
+                22.3106,
+                73.1722
+            ],
+            "area": "Alkapuri"
+        },
+        "assignment": "Traffic Control - Alkapuri Circle",
+        "shift": {
+            "start": "08:00",
+            "end": "16:00"
+        },
+        "contact": {
+            "phone": "+91-9876543210",
+            "radio": "CH-1"
+        },
+        "performance": {
+            "violationsIssued": 45,
+            "incidentsHandled": 12,
+            "avgResponseTime": 8.5
+        },
+        "equipment": [
+            "Radio",
+            "Speed Gun",
+            "Body Camera"
+        ]
+    },
+    {
+        "id": "OFF-002",
+        "name": "Priya Sharma",
+        "badgeNumber": "TF-1002",
+        "rank": "Sub-Inspector",
+        "status": "deployed",
+        "location": {
+            "coordinates": [
+                22.3129,
+                73.1895
+            ],
+            "area": "Sayaji Gunj"
+        },
+        "assignment": "Incident Response - INC-003",
+        "shift": {
+            "start": "08:00",
+            "end": "16:00"
+        },
+        "contact": {
+            "phone": "+91-9876543211",
+            "radio": "CH-1"
+        },
+        "performance": {
+            "violationsIssued": 38,
+            "incidentsHandled": 18,
+            "avgResponseTime": 6.2
+        },
+        "equipment": [
+            "Radio",
+            "First Aid Kit",
+            "Body Camera"
+        ]
+    },
+    {
+        "id": "OFF-003",
+        "name": "Amit Patel",
+        "badgeNumber": "TF-1003",
+        "rank": "Constable",
+        "status": "on-duty",
+        "location": {
+            "coordinates": [
+                22.3217,
+                73.1932
+            ],
+            "area": "Fatehgunj"
+        },
+        "assignment": "Patrol - Fatehgunj Zone",
+        "shift": {
+            "start": "08:00",
+            "end": "16:00"
+        },
+        "contact": {
+            "phone": "+91-9876543212",
+            "radio": "CH-2"
+        },
+        "performance": {
+            "violationsIssued": 52,
+            "incidentsHandled": 9,
+            "avgResponseTime": 10.1
+        },
+        "equipment": [
+            "Radio",
+            "Breathalyzer",
+            "Speed Gun"
+        ]
+    },
+    {
+        "id": "OFF-004",
+        "name": "Sunita Rao",
+        "badgeNumber": "TF-1004",
+        "rank": "Head Constable",
+        "status": "break",
+        "location": {
+            "coordinates": [
+                22.2996,
+                73.2114
+            ],
+            "area": "Mandvi Gate"
+        },
+        "shift": {
+            "start": "08:00",
+            "end": "16:00"
+        },
+        "contact": {
+            "phone": "+91-9876543213",
+            "radio": "CH-2"
+        },
+        "performance": {
+            "violationsIssued": 41,
+            "incidentsHandled": 14,
+            "avgResponseTime": 7.8
+        },
+        "equipment": [
+            "Radio",
+            "Body Camera"
+        ]
+    },
+    {
+        "id": "OFF-005",
+        "name": "Vikram Singh",
+        "badgeNumber": "TF-1005",
+        "rank": "Inspector",
+        "status": "on-duty",
+        "location": {
+            "coordinates": [
+                22.2938,
+                73.1793
+            ],
+            "area": "Akota"
+        },
+        "assignment": "Traffic Control - Akota Circle",
+        "shift": {
+            "start": "16:00",
+            "end": "00:00"
+        },
+        "contact": {
+            "phone": "+91-9876543214",
+            "radio": "CH-3"
+        },
+        "performance": {
+            "violationsIssued": 67,
+            "incidentsHandled": 21,
+            "avgResponseTime": 5.9
+        },
+        "equipment": [
+            "Radio",
+            "Speed Gun",
+            "Breathalyzer",
+            "Body Camera"
+        ]
+    },
+    {
+        "id": "OFF-006",
+        "name": "Meena Desai",
+        "badgeNumber": "TF-1006",
+        "rank": "Sub-Inspector",
+        "status": "off-duty",
+        "location": {
+            "coordinates": [
+                22.3298,
+                73.2087
+            ],
+            "area": "Karelibaug"
+        },
+        "shift": {
+            "start": "00:00",
+            "end": "08:00"
+        },
+        "contact": {
+            "phone": "+91-9876543215",
+            "radio": "CH-3"
+        },
+        "performance": {
+            "violationsIssued": 33,
+            "incidentsHandled": 11,
+            "avgResponseTime": 9.3
+        },
+        "equipment": [
+            "Radio",
+            "Body Camera"
+        ]
+    }
+]

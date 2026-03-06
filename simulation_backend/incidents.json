@@ -1,0 +1,93 @@
+[
+  {
+    "id": "INC-001",
+    "type": "accident",
+    "severity": "high",
+    "status": "resolved",
+    "location": {
+      "coordinates": [
+        22.3129,
+        73.1895
+      ],
+      "address": "Sayaji Gunj Circle, Station Road",
+      "landmark": "Sayaji Gunj"
+    },
+    "reportedBy": "Citizen - Sarah Connor",
+    "reportedAt": "2024-01-24T05:30:00.000Z",
+    "assignedOfficers": [
+      "OFF-002",
+      "OFF-005"
+    ],
+    "description": "Two-vehicle collision, minor injuries reported",
+    "timeline": {
+      "reported": "2024-01-24T05:30:00.000Z",
+      "assigned": "2024-01-24T05:40:00.000Z",
+      "arrived": "2024-01-24T05:55:00.000Z",
+      "resolved": "2026-01-24T04:07:07.845Z"
+    },
+    "affectedLanes": 2,
+    "estimatedClearanceTime": "2024-01-24T06:30:00.000Z",
+    "notes": [
+      "Ambulance dispatched",
+      "Tow truck requested",
+      "Traffic being diverted",
+      "Status changed to resolved"
+    ]
+  },
+  {
+    "id": "INC-002",
+    "type": "breakdown",
+    "severity": "medium",
+    "status": "assigned",
+    "location": {
+      "coordinates": [
+        22.3217,
+        73.1932
+      ],
+      "address": "Fatehgunj Main Road",
+      "landmark": "Fatehgunj Circle"
+    },
+    "reportedBy": "Officer - Amit Patel",
+    "reportedAt": "2024-01-24T06:00:00.000Z",
+    "assignedOfficers": [
+      "OFF-003"
+    ],
+    "description": "Heavy truck breakdown blocking right lane",
+    "timeline": {
+      "reported": "2024-01-24T06:00:00.000Z",
+      "assigned": "2024-01-24T06:05:00.000Z"
+    },
+    "affectedLanes": 1,
+    "estimatedClearanceTime": "2024-01-24T07:00:00.000Z",
+    "notes": [
+      "Tow truck en route",
+      "Traffic slowing in area"
+    ]
+  },
+  {
+    "id": "INC-003",
+    "type": "road-closure",
+    "severity": "critical",
+    "status": "reported",
+    "location": {
+      "coordinates": [
+        22.3106,
+        73.1722
+      ],
+      "address": "Alkapuri Circle, RC Dutt Road",
+      "landmark": "Alkapuri"
+    },
+    "reportedBy": "Control Room",
+    "reportedAt": "2024-01-24T06:15:00.000Z",
+    "assignedOfficers": [],
+    "description": "Water main break, road flooding",
+    "timeline": {
+      "reported": "2024-01-24T06:15:00.000Z"
+    },
+    "affectedLanes": 4,
+    "notes": [
+      "Municipal corporation notified",
+      "Diversion route being set up"
+    ]
+  }
+]

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Tier 2 District City Simulation Server - NodeMAPPO Backend
-45 junctions with medium traffic demand patterns.
+Tier 1 Metro City Simulation Server - NodeMAPPO Backend
+35 junctions with high traffic demand patterns.
 
 Uses the same VectorizedTrafficEnv and MAPPO inference as the original
 simulation, providing full 12-directional movement support.
@@ -41,16 +41,16 @@ from mappo_inference import (
     flatten_obs,
 )
 
-logger = logging.getLogger("tier2_sim_server")
+logger = logging.getLogger("tier1_sim_server")
 logging.basicConfig(level=logging.INFO)
 
-# Tier 2 specific paths
-JSON_PATH = SCRIPT_DIR / "tier2.json"
+# Tier 1 specific paths
+JSON_PATH = SCRIPT_DIR / "tier1.json"
 FLOWMASTERS_ROOT = PROJECT_ROOT.parent
 CHECKPOINT_PATH = PROJECT_ROOT / "policy_shared_final.pt"
 
 DEVICE = "cuda" if os.getenv("CUDA_VISIBLE_DEVICES") else "cpu"
-PORT = 8768
+PORT = 8767
 
 # Gemini API configuration
 GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE"
@@ -254,7 +254,7 @@ class SimulationState:
 
 state = SimulationState()
 
-app = FastAPI(title="Tier 2 District City Simulation Server", version="2.0.0")
+app = FastAPI(title="Tier 1 Metro City Simulation Server", version="2.0.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -268,7 +268,7 @@ app.add_middleware(
 @app.get("/")
 def root():
     return {
-        "name": "Tier 2 District City Simulation Server (NodeMAPPO)",
+        "name": "Tier 1 Metro City Simulation Server (NodeMAPPO)",
         "version": "2.0.0",
         "device": DEVICE,
         "junctions": 45,
@@ -333,7 +333,7 @@ def start_simulation(req: StartSimRequest):
             state.last_phases = None
             state.error = None
         
-        logger.info(f"Tier 2 District City simulation started: {req.sim_id} with demand={req.base_demand}")
+        logger.info(f"Tier 1 Metro City simulation started: {req.sim_id} with demand={req.base_demand}")
         return {"status": "started", "step": 0, "junctions": 45}
         
     except Exception as e:
@@ -684,7 +684,7 @@ def parse_command_with_gemini(command: str) -> dict:
 
 Command: "{command}"
 
-Valid signal IDs are S1 through S45.
+Valid signal IDs are S1 through S35.
 
 Return a JSON object with:
 - "action": one of "emergency", "accident", "rally"
@@ -814,7 +814,7 @@ def parse_llm_command(req: LLMCommandRequest):
         raise HTTPException(400, "No valid signals found in command")
     
     # Validate signals
-    valid_ids = set(NETWORK_GRAPH.keys()) if NETWORK_GRAPH else {f"S{i}" for i in range(1, 46)}
+    valid_ids = set(NETWORK_GRAPH.keys()) if NETWORK_GRAPH else {f"S{i}" for i in range(1, 36)}
     invalid = [s for s in final_signals if s not in valid_ids]
     if invalid:
         raise HTTPException(400, f"Invalid signal IDs: {invalid}")
@@ -921,9 +921,9 @@ Reply <code>route S1 to S20</code> for alternate directions.""")
 
 if __name__ == "__main__":
     import uvicorn
-    print(f"🏙️ Tier 2 District City Simulation Server (NodeMAPPO)")
+    print(f"🏢 Tier 1 Metro City Simulation Server (NodeMAPPO)")
     print(f"   Device: {DEVICE}")
-    print(f"   Network: {JSON_PATH} (45 junctions)")
+    print(f"   Network: {JSON_PATH} (35 junctions)")
     print(f"   Policy: {CHECKPOINT_PATH}")
     print(f"   Port: {PORT}")
     print(f"   Features: 12-directional movement, NodeMAPPO signal control, Event scenarios, LLM commands")
