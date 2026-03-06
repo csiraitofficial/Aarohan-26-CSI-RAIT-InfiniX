@@ -1,0 +1,681 @@
+{
+    "common": {
+        "dashboard": "डैशबोर्ड",
+        "incidents": "घटनाएं",
+        "signalControl": "सिग्नल नियंत्रण",
+        "personnel": "कर्मचारी",
+        "mappoSim": "मैपो सिम",
+        "tier1Sim": "टियर 1 सिम",
+        "tier2Sim": "टियर 2 सिम",
+        "cctvMonitoring": "सीसीटीवी निगरानी",
+        "emergency": "आपातकालीन",
+        "analytics": "एआई विश्लेषण",
+        "potholeDetection": "गड्ढों का पता लगाना",
+        "logout": "लॉगआउट",
+        "reportIncident": "घटना की रिपोर्ट करें",
+        "reportPothole": "गड्ढे की रिपोर्ट करें"
+    },
+    "dashboard": {
+        "title": "केंद्रीय संचालन डैशबोर्ड",
+        "subtitle": "वास्तविक समय की निगरानी और एआई-संचालित अंतर्दृष्टि",
+        "systemStatus": "सिस्टम स्थिति",
+        "operational": "परिचालन में",
+        "disconnected": "डिस्कनेक्ट हो गया",
+        "simulationSource": "सिमुलेशन स्रोत",
+        "totalVehicles": "कुल वाहन",
+        "totalQueue": "कुल कतार",
+        "activeIncidents": "सक्रिय घटनाएं",
+        "spillbackSignals": "स्पिलबैक सिग्नल",
+        "signalsOnline": "सिग्नल ऑनलाइन",
+        "simulationStep": "सिमुलेशन चरण",
+        "quickActions": "त्वरित कार्रवाई",
+        "dispatchOfficer": "अधिकारी भेजें",
+        "generateReport": "रिपोर्ट तैयार करें",
+        "overrideSignal": "सिग्नल ओवरराइड करें",
+        "systemSettings": "सिस्टम सेटिंग्स",
+        "activeEvents": "सक्रिय सिमुलेशन इवेंट्स"
+    },
+    "alerts": {
+        "title": "अलर्ट फीड",
+        "noAlerts": "इस समय कोई अलर्ट नहीं है",
+        "new": "नया",
+        "viewOnMap": "मानचित्र पर देखें",
+        "types": {
+            "violation": "नियम उल्लंघन",
+            "incident": "घटना",
+            "system": "सिस्टम",
+            "weather": "मौसम",
+            "congestion": "भीड़"
+        },
+        "priorities": {
+            "critical": "गंभीर",
+            "high": "उच्च",
+            "medium": "मध्यम",
+            "low": "कम"
+        },
+        "messages": {
+            "accident": "{{location}} पर दुर्घटना की सूचना मिली है - 2 वाहन शामिल हैं",
+            "congestion": "{{location}} पर भारी ट्रैफिक पाया गया - घनत्व: {{density}}",
+            "offline": "{{location}} पर सिग्नल ऑफलाइन है - मैन्युअल नियंत्रण की आवश्यकता है",
+            "speeding": "तेज गति उल्लंघन का पता चला - {{vehicle}} {{speed}} किमी/घंटा की गति से",
+            "weather": "2 घंटे में भारी बारिश की संभावना है - कम दृश्यता के लिए तैयार रहें"
+        }
+    },
+    "incidents": {
+        "activeTitle": "सक्रिय घटनाएं",
+        "viewAll": "सभी देखें",
+        "noIncidents": "कोई सक्रिय घटना नहीं",
+        "accidentAt": "दुर्घटना @ {{signals}}",
+        "rallyAt": "रैली @ {{signals}}",
+        "severities": {
+            "critical": "गंभीर",
+            "high": "उच्च",
+            "medium": "मध्यम",
+            "low": "कम"
+        },
+        "statuses": {
+            "reported": "रिपोर्ट किया गया",
+            "assigned": "सौंपा गया",
+            "in-progress": "प्रगति पर",
+            "resolved": "सुलझ गया",
+            "closed": "बंद"
+        },
+        "types": {
+            "accident": "दुर्घटना",
+            "breakdown": "खराबी",
+            "road-closure": "सड़क बंद",
+            "event": "आयोजन",
+            "hazard": "खतरा",
+            "congestion": "भीड़",
+            "sos": "संकट"
+        },
+        "affectedLanes": "प्रभावित लेन",
+        "estClearance": "अनुमानित समय",
+        "assignOfficer": "अधिकारी नियुक्त करें",
+        "markResolved": "सुलझ गया के रूप में चिह्नित करें",
+        "viewDetails": "विवरण देखें",
+        "latestUpdate": "नवीनतम अपडेट",
+        "officer": "अधिकारी",
+        "officers": "अधिकारी"
+    },
+    "map": {
+        "searchPlaceholder": "स्थान खोजें...",
+        "liveTraffic": "लाइव ट्रैफिक",
+        "trafficDesc": "रंग-कोडित ट्रैफिक प्रवाह",
+        "deviceTypes": "डिवाइस के प्रकार",
+        "sensor": "सेंसर",
+        "camera": "कैमरा",
+        "repeater": "रिपीटर",
+        "gateway": "गेटवे",
+        "currentLocation": "वर्तमान स्थान",
+        "locationNotFound": "स्थान नहीं मिला। कृपया दूसरा शोध करने का प्रयास करें।",
+        "searchError": "स्थान खोजने में त्रुटि। कृपया पुनः प्रयास करें।",
+        "sosTitle": "🚨 आपातकालीन एसओएस",
+        "sosMessage": "उपयोगकर्ता को यहाँ सहायता की आवश्यकता है!"
+    },
+    "incidentManagement": {
+        "title": "घटना प्रबंधन",
+        "subtitle": "यातायात घटनाओं को ट्रैक और प्रबंधित करें",
+        "reportButton": "घटना की रिपोर्ट करें",
+        "stats": {
+            "total": "कुल घटनाएं",
+            "active": "सक्रिय",
+            "critical": "गंभीर",
+            "resolved": "सुलझ गया"
+        },
+        "mapTitle": "घटना मानचित्र",
+        "tabs": {
+            "active": "सक्रिय",
+            "resolved": "सुलझ गया"
+        },
+        "reportDialog": {
+            "title": "नई घटना की रिपोर्ट करें",
+            "subtitle": "घटना के बारे में विवरण प्रदान करें",
+            "type": "घटना का प्रकार",
+            "severity": "गंभीरता",
+            "landmark": "लैंडमार्क",
+            "landmarkPlaceholder": "जैसे, अलकापुरी सर्कल",
+            "address": "पूरा पता",
+            "addressPlaceholder": "जैसे, अलकापुरी, वडोदरा, गुजरात",
+            "descriptionLabel": "विवरण",
+            "descriptionPlaceholder": "घटना का विस्तृत विवरण दें...",
+            "affectedLanes": "प्रभावित लेन",
+            "cancel": "रद्द करें",
+            "report": "घटना की रिपोर्ट करें"
+        },
+        "assignDialog": {
+            "title": "घटना के लिए अधिकारी नियुक्त करें",
+            "officerStatus": "स्थिति"
+        },
+        "detailsDialog": {
+            "title": "घटना का विवरण",
+            "reported": "रिपोर्ट किया गया",
+            "descriptionLabel": "विवरण",
+            "assignedTeam": "नियुक्त टीम",
+            "noOfficers": "चिह्नित अधिकारी नहीं हैं",
+            "activityLog": "गतिविधि लॉग",
+            "reportedBy": "{{name}} द्वारा रिपोर्ट की गई घटना",
+            "startProgress": "प्रगति शुरू करें",
+            "markResolved": "सुलझ गया के रूप में चिह्नित करें",
+            "close": "बंद करें"
+        },
+        "toasts": {
+            "geocodingError": "मानचित्र पर सटीक स्थान नहीं मिला",
+            "geocodingDesc": "डिफ़ॉल्ट शहर केंद्र निर्देशांक का उपयोग कर रहा है।",
+            "reportSuccess": "घटना की रिपोर्ट सफलतापूर्वक की गई",
+            "assignSuccess": "अधिकारी सफलतापूर्वक नियुक्त किया गया",
+            "assignDesc": "अधिकारी {{landmark}} की ओर रवाना हुआ",
+            "statusUpdated": "घटना की स्थिति {{status}} पर अपडेट की गई",
+            "officerAssigned": "अधिकारी {{officerId}} घटना के लिए नियुक्त किया गया",
+            "statusChanged": "स्थिति {{status}} पर बदल गई"
+        }
+    },
+    "signalControl": {
+        "title": "सिग्नल नियंत्रण केंद्र",
+        "subtitle": "सभी यातायात सिग्नलों का प्रबंधन और ट्रैक करें",
+        "syncButton": "सिग्नल सिंक करें",
+        "adaptiveAll": "सभी अडैप्टिव सक्षम करें",
+        "stats": {
+            "total": "कुल सिग्नल",
+            "operational": "परिचालन में",
+            "warning": "चेतावनी",
+            "offline": "ऑफलाइन",
+            "adaptive": "अडैप्टिव"
+        },
+        "tabs": {
+            "all": "सभी",
+            "operational": "परिचालन में",
+            "warning": "चेतावनी",
+            "offline": "ऑफलाइन"
+        },
+        "card": {
+            "phase": "चरण:",
+            "adaptive": "अडैप्टिव",
+            "density": "घनत्व",
+            "vehicles": "वाहन",
+            "red": "लाल:",
+            "yellow": "पीला:",
+            "green": "हरा:",
+            "adjust": "समायोजित करें",
+            "autoMode": "ऑटो",
+            "manualMode": "मैन्युअल"
+        },
+        "adjustDialog": {
+            "title": "सिग्नल समय समायोजित करें",
+            "redLabel": "लाल अवधि (सेकंड)",
+            "yellowLabel": "पीली अवधि (सेकंड)",
+            "greenLabel": "हरी अवधि (सेकंड)",
+            "totalCycle": "कुल चक्र समय",
+            "cycleDesc": "पूर्ण सिग्नल चक्र के लिए समय",
+            "cancel": "रद्द करें",
+            "save": "समय सहेजें"
+        },
+        "toasts": {
+            "modeSwitched": "{{name}} {{mode}} मोड पर स्विच किया गया",
+            "adaptiveDesc": "एआई यातायात के अनुसार समय का नियोजन करेगा",
+            "manualDesc": "मैन्युअल समय नियंत्रण सक्षम",
+            "timingsUpdated": "{{name}} के लिए समय अपडेट किया गया",
+            "timingsDesc": "लाल: {{red}}s, पीला: {{yellow}}s, हरा: {{green}}s",
+            "allAdaptive": "सभी सिग्नल अडैप्टिव मोड पर स्विच किए गए",
+            "allAdaptiveDesc": "एआई यातायात की स्थिति के आधार पर सभी सिग्नल समय का नियोजन करेगा",
+            "syncInitiated": "सिग्नल सिंक्रोनाइज़ेशन शुरू हुआ",
+            "syncDesc": "मुख्य मार्गों के लिए ग्रीन वे कॉरिडोर बनाना"
+        }
+    },
+    "signals": {
+        "phases": {
+            "red": "लाल",
+            "yellow": "पीला",
+            "green": "हरा"
+        },
+        "statuses": {
+            "operational": "परिचालन में",
+            "warning": "चेतावनी",
+            "offline": "ऑफलाइन",
+            "maintenance": "रखरखाव"
+        }
+    },
+    "personnelManagement": {
+        "title": "कर्मचारी प्रबंधन",
+        "subtitle": "यातायात अधिकारियों की निगरानी और प्रबंधन करें",
+        "viewShifts": "शिफ्ट देखें",
+        "trackAll": "सभी को ट्रैक करें",
+        "mapTitle": "अधिकारी स्थान",
+        "stats": {
+            "total": "कुल अधिकारी",
+            "onDuty": "ड्यूटी पर",
+            "deployed": "तैनात",
+            "offDuty": "ड्यूटी से बाहर",
+            "violations": "उल्लंघन",
+            "incidents": "घटनाएं",
+            "avgResponse": "औसत प्रतिक्रिया"
+        },
+        "tabs": {
+            "onDuty": "ड्यूटी पर",
+            "offDuty": "ड्यूटी से बाहर"
+        },
+        "card": {
+            "assignment": "सौंपा गया कार्य",
+            "violations": "उल्लंघन:",
+            "incidents": "घटनाएं:",
+            "avgResponse": "औसत प्रतिक्रिया:",
+            "call": "कॉल करें",
+            "track": "ट्रैक करें",
+            "shift": "शिफ्ट:"
+        }
+    },
+    "simulations": {
+        "mappo": {
+            "title": "MAPPO यातायात सिमुलेशन",
+            "standaloneTitle": "यातायात अनुकूलन सिमुलेशन",
+            "description": "सुदृढीकरण अधिगम का उपयोग करके वास्तविक समय अनुकूली सिग्नल नियंत्रण",
+            "standaloneDescription": "SCOOT-शैली घनत्व-आधारित सिग्नल नियंत्रण (स्टैंडअलोन मोड)",
+            "mappoMode": "MAPPO",
+            "optimMode": "ऑप्टिम",
+            "connected": "कनेक्टेड",
+            "disconnected": "डिस्कनेक्टेड",
+            "standalone": "स्टैंडअलोन",
+            "step": "चरण",
+            "start": "शुरू करें",
+            "stop": "रुकें",
+            "stats": {
+                "simulationStep": "सिमुलेशन चरण",
+                "totalQueue": "कुल कतार",
+                "spillbackSignals": "स्पिलबैक सिग्नल",
+                "activeSignals": "सक्रिय सिग्नल"
+            },
+            "networkTopology": "नेटवर्क टोपोलॉजी",
+            "signalStates": "सिग्नल स्थिति",
+            "signalStatesDesc": "विस्तृत जंक्शन विज़ुअलाइज़ेशन देखने के लिए सिग्नल पर क्लिक करें",
+            "table": {
+                "signal": "सिग्नल",
+                "type": "प्रकार",
+                "phase": "चरण",
+                "movements": "अनुमत गतिविधियां",
+                "throughQ": "थ्रू क्यू",
+                "leftQ": "लेफ्ट क्यू",
+                "rightQ": "राइट क्यू",
+                "totalQ": "कुल क्यू",
+                "spillback": "स्पिलबैक",
+                "yes": "हाँ",
+                "no": "नहीं"
+            },
+            "junctionDetail": "जंक्शन विवरण दृश्य",
+            "junctionPlaceholder": "एनिमेटेड ट्रैफिक के साथ विस्तृत विज़ुअलाइज़ेशन देखने के लिए नेटवर्क टोपोलॉजी या सिग्नल स्टेट्स टेबल में जंक्शन पर क्लिक करें"
+        },
+        "tiers": {
+            "level1Title": "यातायात स्थिति सिमुलेशन - स्तर 1",
+            "level1Desc": "35 जंक्शन - आपातकालीन स्थितियों के साथ मेट्रो शहर नेटवर्क",
+            "level2Title": "यातायात स्थिति सिमुलेशन - स्तर 2",
+            "level2Desc": "45 जंक्शन - आपातकालीन स्थितियों के साथ जिला शहर नेटवर्क",
+            "scenarios": {
+                "title": "स्थिति नियंत्रण",
+                "emergency": "आपातकालीन",
+                "accident": "दुर्घटना",
+                "rally": "रैली",
+                "dispatch": "भेजें",
+                "report": "रिपोर्ट",
+                "start": "शुरू करें",
+                "clearAll": "सभी साफ करें",
+                "activeEmergency_one": "{{count}} आपातकालीन",
+                "activeEmergency_other": "{{count}} आपातकालीन स्थितियाँ",
+                "blockedJunctions_one": "{{count}} अवरुद्ध",
+                "blockedJunctions_other": "{{count}} अवरुद्ध"
+            },
+            "aiController": {
+                "title": "AI यातायात नियंत्रक",
+                "placeholder": "कमांड टाइप करें: 'S1 से S18 तक ग्रीन कॉरिडोर बनाएं' या 'S5 पर दुर्घटना की रिपोर्ट करें'",
+                "examples": "उदाहरण",
+                "send": "भेजें",
+                "optimizedRoute": "अनुकूलित मार्ग",
+                "hops_one": "{{count}} हॉप",
+                "hops_other": "{{count}} हॉप्स"
+            },
+            "metrics": {
+                "title": "वास्तविक समय MAPPO प्रदर्शन मेट्रिक्स",
+                "baseline": "बेसलाइन कतार",
+                "withoutMappo": "(MAPPO के बिना)",
+                "optimized": "अनुकूलित कतार",
+                "withMappo": "(MAPPO के साथ)",
+                "improvement": "सुधार",
+                "lessCongestion": "कम भीड़",
+                "activeEvents": "सक्रिय घटनाएं:",
+                "ambulanceAt": "एम्बुलेंस @ {{signal}}",
+                "accidentAt": "दुर्घटना @ {{signals}}",
+                "processionAt": "जुलूस @ {{signal}}",
+                "rallyAt": "रैली @ {{signals}}",
+                "alternativeRoute": "वैकल्पिक मार्ग:",
+                "greenCorridorActive": "ग्रीन कॉरिडोर सक्रिय",
+                "clearedSignals": "साफ किए गए सिग्नल:",
+                "forcedRed": "सिग्नल लाल करने के लिए मजबूर किया गया"
+            }
+        }
+    },
+    "monitoring": {
+        "title": "सीसीटीवी निगरानी + YOLO डिटेक्शन",
+        "subtitle": "एआई वाहन पहचान के साथ लाइव ट्रैफिक कैमरा फीड",
+        "backend": "बैकएंड",
+        "backendStatus": {
+            "online": "ऑनलाइन",
+            "offline": "ऑफलाइन"
+        },
+        "refresh": "रिफ्रेश करें",
+        "vehiclesDetected_one": "{{count}} वाहन पाया गया",
+        "vehiclesDetected_other": "{{count}} वाहन पाए गए",
+        "yolo": "YOLO",
+        "live": "लाइव",
+        "noFeed": "कोई फीड नहीं",
+        "noFeedHint": "cctv_uploads/ में camera_{{cameraId}}.mp4 जोड़ें",
+        "yoloActive": "YOLO सक्रिय",
+        "rec": "REC",
+        "cars": "कार",
+        "bikes": "बाइक",
+        "buses": "बस",
+        "trucks": "ट्रक",
+        "directions": {
+            "North": "उत्तर",
+            "East": "पूर्व",
+            "South": "दक्षिण",
+            "West": "पश्चिम"
+        }
+    },
+    "emergency": {
+        "title": "आपातकालीन प्रतिक्रिया",
+        "subtitle": "कस्टम स्थान खोज के साथ प्राथमिकता मार्ग और सिग्नल नियंत्रण",
+        "routePlanning": "मार्ग योजना",
+        "startLocation": "प्रारंभिक स्थान (बिंदु ए)",
+        "destination": "गंतव्य (बिंदु बी)",
+        "searchStart": "प्रारंभिक बिंदु खोजें...",
+        "searchDest": "गंतव्य खोजें...",
+        "calculateRoutes": "आपातकालीन मार्गों की गणना करें",
+        "calculating": "मार्गों की गणना की जा रही है...",
+        "altRoute": "कम भीड़ वाली सड़कों के माध्यम से वैकल्पिक मार्ग",
+        "toasts": {
+            "startSet": "प्रारंभिक स्थान निर्धारित किया गया",
+            "destSet": "गंतव्य निर्धारित किया गया",
+            "swapped": "स्थानों की अदला-बदली की गई",
+            "swappedDesc": "प्रारंभ और गंतव्य स्थानों की अदला-बदली कर दी गई है",
+            "calculated": "मार्गों की गणना की गई",
+            "calculatedDesc": "{{count}} मार्ग {{suffix}} पाए गए। सबसे तेज़: {{time}} मिनट ({{distance}} किमी)",
+            "failed": "मार्ग गणना सफल नहीं हुई",
+            "failedDesc": "कृपया अपने स्थानों की जाँच करें और पुनः प्रयास करें।",
+            "invalid": "अमान्य स्थान",
+            "invalidDesc": "कृपया प्रारंभ और गंतव्य दोनों स्थान चुनें",
+            "activated": "आपातकालीन मार्ग सक्रिय",
+            "activatedDesc": "{{vehicle}} के लिए प्राथमिकता मार्ग खाली कर दिया गया है।",
+            "deactivated": "आपातकालीन मार्ग निष्क्रिय",
+            "deactivatedDesc": "ट्रैफिक सिग्नल सामान्य कामकाज पर वापस आ गए हैं।",
+            "updated": "मार्ग अपडेट किया गया",
+            "saving": "{{time}} मिनट की बचत।"
+        },
+        "vehicles": {
+            "ambulance": "एम्बुलेंस",
+            "fire": "दमकल",
+            "vip": "वीआईपी काफिला",
+            "vipEscort": "वीआईपी रक्षक"
+        },
+        "panel": {
+            "title": "आपातकालीन नियंत्रण",
+            "subtitle": "यातायात सिग्नल प्राथमिकता प्रणाली",
+            "priorityMode": "प्राथमिकता मोड",
+            "routeSelection": "मार्ग चयन",
+            "selectStart": "प्रारंभ बिंदु चुनें",
+            "selectDest": "गंतव्य चुनें",
+            "locations": {
+                "hospital": "सिटी अस्पताल",
+                "airport": "अंतर्राष्ट्रीय हवाई अड्डा",
+                "downtown": "डाउनटाउन प्लाजा",
+                "firestation": "सेंट्रल फायर स्टेशन",
+                "stadium": "सिटी स्टेडियम",
+                "industrial": "औद्योगिक क्षेत्र"
+            },
+            "deactivate": "आपातकालीन मार्ग निष्क्रिय करें",
+            "activate": "प्राथमिकता मार्ग सक्रिय करें",
+            "metrics": {
+                "distance": "दूरी",
+                "eta": "अनुमानित समय",
+                "delay": "ट्रैफिक देरी",
+                "status": "ट्रैफिक स्थिति",
+                "heavy": "भारी ट्रैफिक मिला!",
+                "clear": "साफ़"
+            },
+            "availableRoutes": "उपलब्ध मार्ग",
+            "current": "वर्तमान",
+            "fastest": "सबसे तेज़"
+        }
+    },
+    "analytics": {
+        "title": "एआई विश्लेषण",
+        "subtitle": "LSTM यातायात पूर्वानुमान",
+        "warning": "लाइव डेटा देखने के लिए सिमुलेशन (MAPPO या ऑप्टिमाइजेशन मोड) शुरू करें",
+        "distribution": "वर्तमान डिटेक्शन वितरण",
+        "statistics": "वर्ग-वार आंकड़े",
+        "predictions": "LSTM यातायात पूर्वानुमान",
+        "metrics": "लाइव यातायात मेट्रिक्स",
+        "summary": "मॉडल प्रदर्शन सारांश",
+        "actual": "वास्तविक",
+        "predicted": "अनुमानित",
+        "accuracy": "LSTM सटीकता",
+        "mae": "पूर्वानुमान MAE",
+        "error": "पूर्वानुमान त्रुटि"
+    },
+    "potholeDetection": {
+        "title": "गड्ढों की पहचान",
+        "subtitle": "एआई-संचालित सड़क क्षति पहचान और विश्लेषण",
+        "tabs": {
+            "ai": "एआई डिटेक्शन",
+            "reports": "उपयोगकर्ता रिपोर्ट"
+        },
+        "upload": {
+            "title": "छवि या वीडियो अपलोड करें",
+            "desc": "ड्रैग और ड्रॉप करें या ब्राउज़ करने के लिए क्लिक करें",
+            "select": "फ़ाइल चुनें",
+            "formats": "समर्थित प्रारूप: JPG, PNG, MP4, AVI"
+        },
+        "actions": {
+            "run": "डिटेक्शन चलाएं",
+            "processing": "प्रक्रिया चल रही है...",
+            "export": "परिणाम निर्यात करें",
+            "view": "विवरण देखें"
+        },
+        "messages": {
+            "noReports": "अभी तक कोई गड्ढा रिपोर्ट सबमिट नहीं की गई है।",
+            "liveDetection": "लाइव डिटेक्शन"
+        },
+        "details": {
+            "title": "रिपोर्ट विवरण",
+            "location": "स्थान",
+            "description": "विवरण",
+            "severity": "गंभीरता",
+            "status": "स्थिति",
+            "notes": "नोट्स",
+            "reportedOn": "{{date}} को सबमिट किया गया"
+        },
+        "toasts": {
+            "invalidType": "अमान्य फ़ाइल प्रकार",
+            "invalidTypeDesc": "कृपया इमेज या वीडियो फ़ाइल अपलोड करें",
+            "uploaded": "फ़ाइल अपलोड की गई",
+            "ready": "{{name}} विश्लेषण के लिए तैयार है",
+            "liveStarted": "लाइव डिटेक्शन शुरू हुआ",
+            "processingLive": "वीडियो की लाइव प्रोसेसिंग चल रही है...",
+            "complete": "डिटेक्शन पूरा हुआ",
+            "found": "{{count}} गड्ढे मिले",
+            "failed": "डिटेक्शन सफल नहीं हुआ"
+        }
+    },
+    "officers": {
+        "ranks": {
+            "Inspector": "निरीक्षक",
+            "Sub-Inspector": "उप-निरीक्षक",
+            "Head Constable": "हेड कांस्टेबल",
+            "Constable": "कांस्टेबल",
+            "Traffic Warden": "ट्रैफिक वार्डन"
+        },
+        "statuses": {
+            "on-duty": "ड्यूटी पर",
+            "deployed": "तैनात",
+            "break": "ब्रेक पर",
+            "off-duty": "ड्यूटी से बाहर",
+            "on-call": "ऑन कॉल"
+        }
+    },
+    "auth": {
+        "login": "लॉगिन",
+        "otpLogin": "ओटीपी लॉगिन",
+        "passwordLogin": "पासवर्ड लॉगिन",
+        "phoneNumber": "फ़ोन नंबर",
+        "enterPhoneNumber": "10-अंकीय नंबर दर्ज करें",
+        "sendOtp": "ओटीपी भेजें",
+        "sending": "भेज रहा है...",
+        "verificationCode": "सत्यापन कोड",
+        "enterOtp": "6-अंकीय ओटीपी दर्ज करें",
+        "verifyAndLogin": "सत्यापित करें और लॉगिन करें",
+        "verifying": "सत्यापित कर रहा है...",
+        "password": "पासवर्ड",
+        "loggingIn": "लॉग इन कर रहा है...",
+        "changeNumber": "नंबर बदलें"
+    },
+    "userDashboard": {
+        "title": "सार्वजनिक रिपोर्ट पोर्टल",
+        "subtitle": "यातायात की घटनाओं और खतरों की रिपोर्ट करके हमारे शहर को सुरक्षित रखने में मदद करें।",
+        "sosButton": "SOS आपातकालीन",
+        "reportTitle": "घटना की रिपोर्ट करें",
+        "reportDesc": "दुर्घटनाओं, खराब वाहनों या सड़क के खतरों के बारे में विवरण दें।",
+        "incidentType": "घटना का प्रकार",
+        "selectType": "प्रकार चुनें...",
+        "types": {
+            "accident": "दुर्घटना / टक्कर",
+            "breakdown": "वाहन खराब",
+            "hazard": "सड़क का खतरा / मलबा",
+            "congestion": "भारी भीड़",
+            "road-closure": "सड़क बंद",
+            "other": "अन्य"
+        },
+        "location": "स्थान",
+        "locationPlaceholder": "जैसे अलकापुरी सर्कल के पास",
+        "vehicleNo": "वाहन संख्या (वैकल्पिक)",
+        "vehiclePlaceholder": "OD-XX-YYYY",
+        "description": "विवरण",
+        "descriptionPlaceholder": "क्या हुआ इसका वर्णन करें...",
+        "evidence": "प्रमाण (वैकल्पिक)",
+        "evidenceUpload": "फोटो/वीडियो अपलोड करने के लिए क्लिक करें",
+        "submit": "रिपोर्ट सबमिट करें",
+        "submitting": "रिपोर्ट भेज रहा है...",
+        "myReports": "मेरी रिपोर्ट",
+        "myReportsDesc": "आपकी सबमिट की गई समस्याओं की स्थिति",
+        "noReports": "अभी तक कोई रिपोर्ट सबमिट नहीं की गई है।",
+        "whyReport": "रिपोर्ट क्यों करें?",
+        "reasons": {
+            "response": "तेज़ आपातकालीन प्रतिक्रिया समय।",
+            "mapping": "अन्य ड्राइवरों के लिए नेविगेशन अपडेट करने में मदद करता है।",
+            "planning": "शहर यातायात योजना में सुधार करता है।"
+        },
+        "successTitle": "रिपोर्ट सबमिट की गई!",
+        "successDesc": "आपकी घटना की रिपोर्ट सफलतापूर्वक केंद्रीय कमान केंद्र को भेज दी गई है।",
+        "reportAnother": "एक और रिपोर्ट सबमिट करें",
+        "toasts": {
+            "sosSent": "SOS अलर्ट भेजा गया",
+            "sosSentDesc": "{{address}} के पास आपातकालीन सहायता का अनुरोध किया गया है।",
+            "geoNotSupported": "जियोलोकेशन समर्थित नहीं",
+            "geoNotSupportedDesc": "आपका ब्राउज़र जियोलोकेशन को सपोर्ट नहीं करता है।",
+            "locationFailed": "स्थान विफल",
+            "locationFailedDesc": "SOS अलर्ट के लिए आपका स्थान प्राप्त नहीं किया जा सका।",
+            "missingInfo": "जानकारी गायब है",
+            "missingInfoDesc": "कृपया सभी आवश्यक फ़ील्ड भरें।",
+            "reportSubmitted": "रिपोर्ट सबमिट की गई",
+            "reportSubmittedDesc": "अधिकारियों को सूचित कर दिया गया है। आपकी सहायता के लिए धन्यवाद।"
+        }
+    },
+    "reportPothole": {
+        "title": "सड़क क्षति की रिपोर्ट करें",
+        "subtitle": "गड्ढों और सड़क की सतह की समस्याओं की सीधे रखरखाव टीम को रिपोर्ट करें।",
+        "cardTitle": "गड्ढे का विवरण",
+        "cardDesc": "क्षति कहाँ है?",
+        "locationLabel": "स्थान",
+        "locationPlaceholder": "जैसे अलकापुरी सर्कल के पास",
+        "severityLabel": "गंभीरता",
+        "severityPlaceholder": "गंभीरता चुनें...",
+        "severities": {
+            "low": "कम - मामूली झटका",
+            "medium": "मध्यम - टालने योग्य",
+            "high": "उच्च - खतरनाक / गहरा"
+        },
+        "descriptionLabel": "विवरण",
+        "descriptionPlaceholder": "आकार और स्थिति का वर्णन करें...",
+        "photoLabel": "फोटो प्रमाण (वैकल्पिक)",
+        "photoUpload": "फोटो अपलोड करने के लिए क्लिक करें",
+        "submitReport": "रिपोर्ट सबमिट करें",
+        "sending": "भेज रहा है...",
+        "tipsTitle": "सड़क सुरक्षा युक्तियाँ",
+        "tips": {
+            "tip1": "गड्ढों से बचने के लिए अचानक न मुड़ें।",
+            "tip2": "गड्ढे में गिरने से पहले गति धीमी करें।",
+            "tip3": "अपने टायर के दबाव की नियमित जांच करें।"
+        },
+        "successTitle": "रिपोर्ट प्राप्त हुई!",
+        "successDesc": "हमारी सड़कों को सुरक्षित रखने में मदद करने के लिए धन्यवाद।",
+        "reportAnother": "एक और समस्या की रिपोर्ट करें"
+    },
+    "landing": {
+        "nav": {
+            "challenge": "चुनौती",
+            "solutions": "समाधान",
+            "login": "लॉगिन"
+        },
+        "hero": {
+            "title": "नब्ज पहचानना",
+            "titleAccent": "शहरी गतिशीलता।",
+            "description": "पुराने यातायात बुनियादी ढांचे को एक बुद्धिमान, उत्तरदायी पारिस्थितिकी तंत्र में बदलना जो भीड़भाड़ को दूर करता है और जीवन बचाता है।",
+            "launch": "प्लेटफॉर्म लॉन्च करें"
+        },
+        "challenge": {
+            "title": "चुनौती",
+            "subtitle": "आधुनिक शहर अभी भी पुराने बुनियादी ढांचे पर चल रहे हैं जो बढ़ती वाहन घनत्व के साथ तालमेल नहीं बिठा सकते।",
+            "problems": {
+                "fixed": {
+                    "title": "निश्चित सिग्नल चक्र",
+                    "desc": "सिग्नल मांग के बजाय टाइमर पर बदलते हैं, जिससे सड़कें खाली होने पर भी अनावश्यक रुकना पड़ता है।"
+                },
+                "unfair": {
+                    "title": "असमान वितरण",
+                    "desc": "पूर्व-प्रोग्राम की गई प्रणालियाँ असमान यातायात भार को संतुलित करने में विफल रहती हैं, जिससे पीक आवर्स के दौरान भारी जाम लगता है।"
+                },
+                "gridlock": {
+                    "title": "आपातकालीन गतिरोध",
+                    "desc": "प्राथमिकता मार्ग नियोजन की कमी के कारण एम्बुलेंस और दमकल गाड़ियाँ यातायात में फँस जाती हैं।"
+                },
+                "coordination": {
+                    "title": "समन्वय की कमी",
+                    "desc": "अलग-थलग पड़े चौराहे एक-दूसरे से संवाद नहीं करते, जिससे शहर के विभिन्न हिस्सों में 'रुको और जाओ' की स्थिति पैदा होती है।"
+                }
+            }
+        },
+        "solutions": {
+            "title": "हमारा बुद्धिमान समाधान",
+            "subtitle": "FlowMasters स्थिर टाइमर को गतिशील, AI-संचालित समन्वय से बदल देता है।",
+            "features": {
+                "dynamic": {
+                    "title": "गतिशील सिग्नल नियंत्रण",
+                    "desc": "मल्टी-एजेंट अनुकूलन सिग्नलों को मल्टी-जंक्शन नेटवर्क में सीखने और समन्वय करने की अनुमति देता है, जिससे 'खाली सड़क' वाले ग्रीन सिग्नल खत्म होते हैं और प्रतीक्षा समय 30% तक कम हो जाता है।",
+                    "tag": "उत्तरदायी एआई"
+                },
+                "predictive": {
+                    "title": "भविष्य कहनेवाला विश्लेषण",
+                    "desc": "भीड़ होने से पहले उसका अनुमान लगाने के लिए ऐतिहासिक प्रवाह पैटर्न का विश्लेषण करता है, जिससे अग्रिम समायोजन संभव हो पाता है।",
+                    "tag": "पूर्वानुमान"
+                },
+                "corridors": {
+                    "title": "इमरजेंसी ग्रीन कॉरिडोर",
+                    "desc": "आपातकालीन वाहनों के आने से पहले सिग्नल पल्स करके उनके लिए रास्ता स्वचालित रूप से साफ़ करता है।",
+                    "tag": "सुरक्षा"
+                },
+                "enforcement": {
+                    "title": "स्वचालित प्रवर्तन",
+                    "desc": "सिग्नल तोड़ना और गलत दिशा में गाड़ी चलाना जैसे उल्लंघनों की स्वचालित रूप से पहचान करता है, जिससे अनुशासन और पैदल यात्री सुरक्षा में सुधार होता है।",
+                    "tag": "अनुपालन"
+                }
+            }
+        },
+        "footer": "FlowMasters • बुद्धिमान गतिशीलता पारिस्थितिकी तंत्र"
+    }
+}

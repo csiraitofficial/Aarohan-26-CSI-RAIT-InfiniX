@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Landing Page Aesthetic: Slate 50 Background, Slate 900 Text, Indigo 600 Primary */
+    --background: 210 40% 98%;
+    /* slate-50 */
+    --foreground: 222 47% 11%;
+    /* slate-900 */
+
+    --card: 0 0% 100%;
+    /* white */
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Violet 600 - Matches 'RemindMe' Dashboard Image */
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    /* slate-100 */
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    /* slate-500 */
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    /* slate-200 */
+    --input: 214 32% 91%;
+    --ring: 249 72% 59%;
+    /* indigo-600 */
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 249 72% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 249 72% 59%;
+
+    /* Premium design tokens from Landing */
+    --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
+    --gradient-secondary: linear-gradient(135deg, #7c3aed 0%, #9333ea 100%);
+    --gradient-card: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
+
+    --glow-primary: 0 8px 30px rgba(79, 70, 229, 0.3);
+    --glow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@layer utilities {
+
+  /* Glassmorphism utilities */
+  .glass {
+    @apply bg-white/60 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10;
+  }
+
+  .glass-card {
+    @apply bg-white dark:bg-gradient-to-br dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-gray-100 dark:border-white/10 shadow-sm dark:shadow-glass;
+  }
+
+  .glass-hover {
+    @apply hover:bg-gray-50 dark:hover:bg-white/10 hover:border-gray-200 dark:hover:border-white/20 transition-all duration-300;
+  }
+
+  /* Premium gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent;
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-warning {
+    box-shadow: var(--glow-warning);
+  }
+
+  .glow-success {
+    box-shadow: var(--glow-success);
+  }
+
+  /* Animated gradient background */
+  @keyframes gradient-shift {
+
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  /* ========================================
+     ACCESSIBILITY STYLES
+     ======================================== */
+
+  /* Font Size Classes */
+  .font-normal {
+    font-size: 16px;
+  }
+
+  .font-large {
+    font-size: 18px;
+  }
+
+  .font-large .text-sm {
+    font-size: 16px;
+  }
+
+  .font-large .text-xs {
+    font-size: 14px;
+  }
+
+  .font-extra-large {
+    font-size: 22px;
+  }
+
+  .font-extra-large .text-sm {
+    font-size: 18px;
+  }
+
+  .font-extra-large .text-xs {
+    font-size: 16px;
+  }
+
+  .font-extra-large .text-lg {
+    font-size: 26px;
+  }
+
+  .font-extra-large .text-xl {
+    font-size: 28px;
+  }
+
+  .font-extra-large .text-2xl {
+    font-size: 32px;
+  }
+
+  /* High Contrast Mode */
+  .high-contrast {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+    --primary: 60 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 80%;
+    --border: 0 0% 40%;
+  }
+
+  .high-contrast * {
+    border-color: hsl(0 0% 60%) !important;
+  }
+
+  .high-contrast a,
+  .high-contrast button {
+    text-decoration: underline;
+  }
+
+  .high-contrast .glass,
+  .high-contrast .glass-card {
+    background: hsl(0 0% 5%) !important;
+    border: 2px solid hsl(0 0% 60%) !important;
+  }
+
+  /* Reduced Motion */
+  .reduce-motion * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  /* Enhanced Focus Indicators for Accessibility */
+  :focus-visible {
+    outline: 3px solid hsl(var(--primary)) !important;
+    outline-offset: 2px;
+  }
+
+  .high-contrast :focus-visible {
+    outline: 3px solid hsl(60 100% 50%) !important;
+    outline-offset: 2px;
+  }
+
+  /* Skip to main content link for keyboard users */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    padding: 8px 16px;
+    z-index: 100;
+    transition: top 0.3s;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Screen reader only content */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}

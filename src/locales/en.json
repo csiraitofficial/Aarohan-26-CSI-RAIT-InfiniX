@@ -1,0 +1,687 @@
+{
+    "common": {
+        "dashboard": "Dashboard",
+        "incidents": "Incidents",
+        "signalControl": "Signal Control",
+        "personnel": "Personnel",
+        "mappoSim": "MAPPO Sim",
+        "tier1Sim": "Tier 1 Sim",
+        "tier2Sim": "Tier 2 Sim",
+        "cctvMonitoring": "CCTV Monitoring",
+        "emergency": "Emergency",
+        "analytics": "AI Analytics",
+        "potholeDetection": "Pothole Detection",
+        "logout": "Logout",
+        "reportIncident": "Report Incident",
+        "reportPothole": "Report Pothole"
+    },
+    "dashboard": {
+        "title": "Central Operations Dashboard",
+        "subtitle": "Real-time monitoring and AI-driven insights",
+        "systemStatus": "System Status",
+        "operational": "Operational",
+        "disconnected": "Disconnected",
+        "simulationSource": "Simulation Source",
+        "totalVehicles": "Total Vehicles",
+        "totalQueue": "Total Queue",
+        "activeIncidents": "Active Incidents",
+        "spillbackSignals": "Spillback Signals",
+        "signalsOnline": "Signals Online",
+        "simulationStep": "Simulation Step",
+        "quickActions": "Quick Actions",
+        "dispatchOfficer": "Dispatch Officer",
+        "generateReport": "Generate Report",
+        "overrideSignal": "Override Signal",
+        "systemSettings": "System Settings",
+        "activeEvents": "Active Simulation Events"
+    },
+    "alerts": {
+        "title": "Alert Feed",
+        "noAlerts": "No alerts at this time",
+        "new": "New",
+        "viewOnMap": "View on Map",
+        "types": {
+            "violation": "Violation",
+            "incident": "Incident",
+            "system": "System",
+            "weather": "Weather",
+            "congestion": "Congestion"
+        },
+        "priorities": {
+            "critical": "Critical",
+            "high": "High",
+            "medium": "Medium",
+            "low": "Low"
+        },
+        "messages": {
+            "accident": "Accident reported at {{location}} - 2 vehicles involved",
+            "congestion": "Heavy traffic detected at {{location}} - Density: {{density}}",
+            "offline": "Signal offline at {{location}} - Manual control required",
+            "speeding": "Speeding violation detected - {{vehicle}} at {{speed}} km/h",
+            "weather": "Heavy rain expected in 2 hours - Prepare for reduced visibility"
+        }
+    },
+    "incidents": {
+        "activeTitle": "Active Incidents",
+        "viewAll": "View All",
+        "noIncidents": "No active incidents",
+        "accidentAt": "Accident @ {{signals}}",
+        "rallyAt": "Rally @ {{signals}}",
+        "severities": {
+            "critical": "Critical",
+            "high": "High",
+            "medium": "Medium",
+            "low": "Low"
+        },
+        "statuses": {
+            "reported": "Reported",
+            "assigned": "Assigned",
+            "in-progress": "In Progress",
+            "resolved": "Resolved",
+            "closed": "Closed"
+        },
+        "types": {
+            "accident": "Accident",
+            "breakdown": "Breakdown",
+            "road-closure": "Road Closure",
+            "event": "Event",
+            "hazard": "Hazard",
+            "congestion": "Congestion",
+            "sos": "SOS"
+        },
+        "affectedLanes": "Affected Lanes",
+        "estClearance": "Est. Clearance",
+        "assignOfficer": "Assign Officer",
+        "markResolved": "Mark Resolved",
+        "viewDetails": "View Details",
+        "latestUpdate": "Latest Update",
+        "officer": "officer",
+        "officers": "officers"
+    },
+    "map": {
+        "searchPlaceholder": "Search location...",
+        "liveTraffic": "Live Traffic",
+        "trafficDesc": "Color-coded traffic flow",
+        "deviceTypes": "Device Types",
+        "sensor": "Sensor",
+        "camera": "Camera",
+        "repeater": "Repeater",
+        "gateway": "Gateway",
+        "currentLocation": "Current Location",
+        "locationNotFound": "Location not found. Please try a different search.",
+        "searchError": "Error searching location. Please try again.",
+        "sosTitle": "🚨 EMERGENCY SOS",
+        "sosMessage": "User needs help here!"
+    },
+    "incidentManagement": {
+        "title": "Incident Management",
+        "subtitle": "Track and manage traffic incidents",
+        "reportButton": "Report Incident",
+        "stats": {
+            "total": "Total Incidents",
+            "active": "Active",
+            "critical": "Critical",
+            "resolved": "Resolved"
+        },
+        "mapTitle": "Incident Map",
+        "tabs": {
+            "active": "Active",
+            "resolved": "Resolved"
+        },
+        "reportDialog": {
+            "title": "Report New Incident",
+            "subtitle": "Provide details about the incident",
+            "type": "Incident Type",
+            "severity": "Severity",
+            "landmark": "Landmark",
+            "landmarkPlaceholder": "e.g., Alkapuri Circle",
+            "address": "Full Address",
+            "addressPlaceholder": "e.g., Alkapuri, Vadodara, Gujarat",
+            "descriptionLabel": "Description",
+            "descriptionPlaceholder": "Provide detailed description of the incident...",
+            "affectedLanes": "Affected Lanes",
+            "cancel": "Cancel",
+            "report": "Report Incident"
+        },
+        "assignDialog": {
+            "title": "Assign Officer to Incident",
+            "officerStatus": "Status"
+        },
+        "detailsDialog": {
+            "title": "Incident Details",
+            "reported": "Reported",
+            "descriptionLabel": "Description",
+            "assignedTeam": "Assigned Team",
+            "noOfficers": "No officers assigned",
+            "activityLog": "Activity Log",
+            "reportedBy": "Incident reported by {{name}}",
+            "startProgress": "Start Progress",
+            "markResolved": "Mark Resolved",
+            "close": "Close"
+        },
+        "toasts": {
+            "geocodingError": "Could not find exact location on map",
+            "geocodingDesc": "Using default city center coordinates.",
+            "reportSuccess": "Incident reported successfully",
+            "assignSuccess": "Officer assigned successfully",
+            "assignDesc": "Officer dispatched to {{landmark}}",
+            "statusUpdated": "Incident status updated to {{status}}",
+            "officerAssigned": "Officer {{officerId}} assigned to incident",
+            "statusChanged": "Status changed to {{status}}"
+        }
+    },
+    "signalControl": {
+        "title": "Signal Control Center",
+        "subtitle": "Manage and monitor all traffic signals",
+        "syncButton": "Sync Signals",
+        "adaptiveAll": "Enable All Adaptive",
+        "stats": {
+            "total": "Total Signals",
+            "operational": "Operational",
+            "warning": "Warning",
+            "offline": "Offline",
+            "adaptive": "Adaptive"
+        },
+        "tabs": {
+            "all": "All",
+            "operational": "Operational",
+            "warning": "Warning",
+            "offline": "Offline"
+        },
+        "card": {
+            "phase": "Phase:",
+            "adaptive": "Adaptive",
+            "density": "Density",
+            "vehicles": "Vehicles",
+            "red": "Red:",
+            "yellow": "Yellow:",
+            "green": "Green:",
+            "adjust": "Adjust",
+            "autoMode": "Auto",
+            "manualMode": "Manual"
+        },
+        "adjustDialog": {
+            "title": "Adjust Signal Timings",
+            "redLabel": "Red Duration (seconds)",
+            "yellowLabel": "Yellow Duration (seconds)",
+            "greenLabel": "Green Duration (seconds)",
+            "totalCycle": "Total Cycle Time",
+            "cycleDesc": "Time for complete signal cycle",
+            "cancel": "Cancel",
+            "save": "Save Timings"
+        },
+        "toasts": {
+            "modeSwitched": "{{name}} switched to {{mode}} mode",
+            "adaptiveDesc": "AI will optimize timings based on traffic",
+            "manualDesc": "Manual timing control enabled",
+            "timingsUpdated": "Timings updated for {{name}}",
+            "timingsDesc": "Red: {{red}}s, Yellow: {{yellow}}s, Green: {{green}}s",
+            "allAdaptive": "All signals switched to Adaptive mode",
+            "allAdaptiveDesc": "AI will optimize all signal timings based on traffic conditions",
+            "syncInitiated": "Signal synchronization initiated",
+            "syncDesc": "Creating green wave corridor for main routes"
+        }
+    },
+    "signals": {
+        "phases": {
+            "red": "Red",
+            "yellow": "Yellow",
+            "green": "Green"
+        },
+        "statuses": {
+            "operational": "Operational",
+            "warning": "Warning",
+            "offline": "Offline",
+            "maintenance": "Maintenance"
+        }
+    },
+    "personnelManagement": {
+        "title": "Personnel Management",
+        "subtitle": "Monitor and manage traffic officers",
+        "viewShifts": "View Shifts",
+        "trackAll": "Track All",
+        "mapTitle": "Officer Locations",
+        "stats": {
+            "total": "Total Officers",
+            "onDuty": "On Duty",
+            "deployed": "Deployed",
+            "offDuty": "Off Duty",
+            "violations": "Violations",
+            "incidents": "Incidents",
+            "avgResponse": "Avg Response"
+        },
+        "tabs": {
+            "onDuty": "On Duty",
+            "offDuty": "Off Duty"
+        },
+        "card": {
+            "assignment": "Assignment",
+            "violations": "Violations:",
+            "incidents": "Incidents:",
+            "avgResponse": "Avg Response:",
+            "call": "Call",
+            "track": "Track",
+            "shift": "Shift:"
+        }
+    },
+    "simulations": {
+        "mappo": {
+            "title": "MAPPO Traffic Simulation",
+            "standaloneTitle": "Traffic Optimization Simulation",
+            "description": "Real-time adaptive signal control using reinforcement learning",
+            "standaloneDescription": "SCOOT-style density-based signal control (standalone mode)",
+            "mappoMode": "MAPPO",
+            "optimMode": "Optim",
+            "connected": "Connected",
+            "disconnected": "Disconnected",
+            "standalone": "Standalone",
+            "step": "Step",
+            "start": "Start",
+            "stop": "Stop",
+            "stats": {
+                "simulationStep": "Simulation Step",
+                "totalQueue": "Total Queue",
+                "spillbackSignals": "Spillback Signals",
+                "activeSignals": "Active Signals"
+            },
+            "networkTopology": "Network Topology",
+            "signalStates": "Signal States",
+            "signalStatesDesc": "Click on a signal to view detailed junction visualization",
+            "table": {
+                "signal": "Signal",
+                "type": "Type",
+                "phase": "Phase",
+                "movements": "Allowed Movements",
+                "throughQ": "Through Q",
+                "leftQ": "Left Q",
+                "rightQ": "Right Q",
+                "totalQ": "Total Q",
+                "spillback": "Spillback",
+                "yes": "Yes",
+                "no": "No"
+            },
+            "junctionDetail": "Junction Detail View",
+            "junctionPlaceholder": "Click on a junction in the Network Topology or Signal States table to view detailed visualization with animated traffic"
+        },
+        "tiers": {
+            "level1Title": "Traffic Scenario Simulation – Level 1",
+            "level1Desc": "35 junctions - Metro city network with emergency scenarios",
+            "level2Title": "Traffic Scenario Simulation – Level 2",
+            "level2Desc": "45 junctions - District city network with emergency scenarios",
+            "scenarios": {
+                "title": "Scenario Controls",
+                "emergency": "Emergency",
+                "accident": "Accident",
+                "rally": "Rally",
+                "dispatch": "Dispatch",
+                "report": "Report",
+                "start": "Start",
+                "clearAll": "Clear All",
+                "activeEmergency_one": "{{count}} Emergency",
+                "activeEmergency_other": "{{count}} Emergencies",
+                "blockedJunctions_one": "{{count}} Blocked",
+                "blockedJunctions_other": "{{count}} Blocked"
+            },
+            "aiController": {
+                "title": "AI Traffic Controller",
+                "placeholder": "Type a command: 'Create green corridor from S1 to S18' or 'Report accident at S5'",
+                "examples": "Examples",
+                "send": "Send",
+                "optimizedRoute": "Optimized Route",
+                "hops_one": "{{count}} hop",
+                "hops_other": "{{count}} hops"
+            },
+            "metrics": {
+                "title": "Real-time MAPPO Performance Metrics",
+                "baseline": "Baseline Queue",
+                "withoutMappo": "(Without MAPPO)",
+                "optimized": "Optimized Queue",
+                "withMappo": "(With MAPPO)",
+                "improvement": "Improvement",
+                "lessCongestion": "Less Congestion",
+                "activeEvents": "Active Events:",
+                "ambulanceAt": "Ambulance @ {{signal}}",
+                "accidentAt": "Accident @ {{signals}}",
+                "processionAt": "Procession @ {{signal}}",
+                "rallyAt": "Rally @ {{signals}}",
+                "alternativeRoute": "Alternative route:",
+                "greenCorridorActive": "Green Corridor Active",
+                "clearedSignals": "Cleared signals:",
+                "forcedRed": "Signals Forced RED"
+            }
+        }
+    },
+    "monitoring": {
+        "title": "CCTV Monitoring + YOLO Detection",
+        "subtitle": "Live traffic camera feeds with AI vehicle detection",
+        "backend": "Backend",
+        "backendStatus": {
+            "online": "Online",
+            "offline": "Offline"
+        },
+        "refresh": "Refresh",
+        "vehiclesDetected_one": "{{count}} Vehicle Detected",
+        "vehiclesDetected_other": "{{count}} Vehicles Detected",
+        "yolo": "YOLO",
+        "live": "LIVE",
+        "noFeed": "No Feed",
+        "noFeedHint": "Add camera_{{cameraId}}.mp4 to cctv_uploads/",
+        "yoloActive": "YOLO ACTIVE",
+        "rec": "REC",
+        "cars": "Cars",
+        "bikes": "Bikes",
+        "buses": "Buses",
+        "trucks": "Trucks",
+        "directions": {
+            "North": "North",
+            "East": "East",
+            "South": "South",
+            "West": "West"
+        }
+    },
+    "emergency": {
+        "title": "Emergency Response",
+        "subtitle": "Priority routing and signal control with custom location search",
+        "routePlanning": "Route Planning",
+        "startLocation": "Start Location (Point A)",
+        "destination": "Destination (Point B)",
+        "searchStart": "Search for starting point...",
+        "searchDest": "Search for destination...",
+        "calculateRoutes": "Calculate Emergency Routes",
+        "calculating": "Calculating Routes...",
+        "altRoute": "Alternative Route via Less Congested Roads",
+        "toasts": {
+            "startSet": "Start Location Set",
+            "destSet": "Destination Set",
+            "swapped": "Locations Swapped",
+            "swappedDesc": "Start and destination have been swapped",
+            "calculated": "Routes Calculated",
+            "calculatedDesc": "Found {{count}} route{{suffix}}. Fastest: {{time}} mins ({{distance}} km)",
+            "failed": "Route Calculation Failed",
+            "failedDesc": "Please check your locations and try again.",
+            "invalid": "Invalid Locations",
+            "invalidDesc": "Please select both start and destination locations",
+            "activated": "Emergency Route Activated",
+            "activatedDesc": "Priority path cleared for {{vehicle}}.",
+            "deactivated": "Emergency Route Deactivated",
+            "deactivatedDesc": "Traffic signals returned to normal operation.",
+            "updated": "Route Updated",
+            "saving": "Saving {{time}} mins."
+        },
+        "vehicles": {
+            "ambulance": "Ambulance",
+            "fire": "Fire Brigade",
+            "vip": "VIP Convoy",
+            "vipEscort": "VIP Escort"
+        },
+        "panel": {
+            "title": "Emergency Control",
+            "subtitle": "Traffic Signal Priority System",
+            "priorityMode": "Priority Mode",
+            "routeSelection": "Route Selection",
+            "selectStart": "Select Start Point",
+            "selectDest": "Select Destination",
+            "locations": {
+                "hospital": "City Hospital",
+                "airport": "Intl Airport",
+                "downtown": "Downtown Plaza",
+                "firestation": "Central Fire Station",
+                "stadium": "City Stadium",
+                "industrial": "Industrial Zone"
+            },
+            "deactivate": "Deactivate Emergency Path",
+            "activate": "Activate Priority Route",
+            "metrics": {
+                "distance": "Distance",
+                "eta": "Estimated Time",
+                "delay": "Traffic Delay",
+                "status": "Traffic Status",
+                "heavy": "Heavy Traffic Detected!",
+                "clear": "Clear"
+            },
+            "availableRoutes": "Available Routes",
+            "current": "Current",
+            "fastest": "Fastest"
+        }
+    },
+    "analytics": {
+        "title": "AI Analytics",
+        "subtitle": "LSTM Traffic Predictions",
+        "warning": "Start the simulation (MAPPO or Optimization mode) to see live data",
+        "distribution": "Current Detection Distribution",
+        "statistics": "Class-wise Statistics",
+        "predictions": "LSTM Traffic Predictions",
+        "metrics": "Live Traffic Metrics",
+        "summary": "Model Performance Summary",
+        "actual": "Actual",
+        "predicted": "Predicted",
+        "accuracy": "LSTM Accuracy",
+        "mae": "Prediction MAE",
+        "error": "Forecast Error"
+    },
+    "potholeDetection": {
+        "title": "Pothole Detection",
+        "subtitle": "AI-powered road damage detection and analysis",
+        "tabs": {
+            "ai": "AI Detection",
+            "reports": "User Reports"
+        },
+        "upload": {
+            "title": "Upload Image or Video",
+            "desc": "Drag and drop or click to browse",
+            "select": "Select File",
+            "formats": "Supported formats: JPG, PNG, MP4, AVI"
+        },
+        "actions": {
+            "run": "Run Detection",
+            "processing": "Processing...",
+            "export": "Export Results",
+            "view": "View Details"
+        },
+        "messages": {
+            "noReports": "No pothole reports submitted yet.",
+            "liveDetection": "LIVE DETECTION"
+        },
+        "details": {
+            "title": "Report Details",
+            "location": "Location",
+            "description": "Description",
+            "severity": "Severity",
+            "status": "Status",
+            "notes": "Notes",
+            "reportedOn": "Submitted on {{date}}"
+        },
+        "toasts": {
+            "invalidType": "Invalid file type",
+            "invalidTypeDesc": "Please upload an image or video file",
+            "uploaded": "File uploaded",
+            "ready": "{{name}} ready for analysis",
+            "liveStarted": "Live detection started",
+            "processingLive": "Processing video live...",
+            "complete": "Detection complete",
+            "found": "Found {{count}} pothole(s)",
+            "failed": "Detection failed"
+        }
+    },
+    "officers": {
+        "ranks": {
+            "Inspector": "Inspector",
+            "Sub-Inspector": "Sub-Inspector",
+            "Head Constable": "Head Constable",
+            "Constable": "Constable",
+            "Traffic Warden": "Traffic Warden"
+        },
+        "statuses": {
+            "on-duty": "On Duty",
+            "deployed": "Deployed",
+            "break": "On Break",
+            "off-duty": "Off Duty",
+            "on-call": "On Call"
+        }
+    },
+    "auth": {
+        "login": "Login",
+        "otpLogin": "OTP Login",
+        "passwordLogin": "Password Login",
+        "phoneNumber": "Phone Number",
+        "enterPhoneNumber": "Enter 10-digit number",
+        "sendOtp": "Send OTP",
+        "sending": "Sending...",
+        "verificationCode": "Verification Code",
+        "enterOtp": "Enter 6-digit OTP",
+        "verifyAndLogin": "Verify & Login",
+        "verifying": "Verifying...",
+        "password": "Password",
+        "loggingIn": "Logging in...",
+        "changeNumber": "Change Number"
+    },
+    "userDashboard": {
+        "title": "Public Reporting Portal",
+        "subtitle": "Help keep our city safe by reporting traffic incidents and hazards.",
+        "sosButton": "SOS EMERGENCY",
+        "reportTitle": "Report an Incident",
+        "reportDesc": "Provide details about accidents, stalls, or road hazards.",
+        "incidentType": "Incident Type",
+        "selectType": "Select type...",
+        "types": {
+            "accident": "Accident / Collision",
+            "breakdown": "Vehicle Breakdown",
+            "hazard": "Road Hazard / Debris",
+            "congestion": "Severe Congestion",
+            "road-closure": "Road Closure",
+            "other": "Other"
+        },
+        "location": "Location",
+        "locationPlaceholder": "e.g. Alkapuri Circle",
+        "vehicleNo": "Vehicle Number (Optional)",
+        "vehiclePlaceholder": "OD-XX-YYYY",
+        "description": "Description",
+        "descriptionPlaceholder": "Describe what happened...",
+        "evidence": "Evidence (Optional)",
+        "evidenceUpload": "Click to upload photos/videos",
+        "submit": "Submit Report",
+        "submitting": "Sending Report...",
+        "myReports": "My Reports",
+        "myReportsDesc": "Status of your submitted issues",
+        "noReports": "No reports submitted yet.",
+        "whyReport": "Why Report?",
+        "reasons": {
+            "response": "Faster emergency response times.",
+            "mapping": "Helps update navigation for other drivers.",
+            "planning": "Improves city traffic planning."
+        },
+        "successTitle": "Report Submitted!",
+        "successDesc": "Your incident report has been successfully sent to the Central Command Center.",
+        "reportAnother": "Submit Another Report",
+        "toasts": {
+            "sosSent": "SOS ALERT SENT",
+            "sosSentDesc": "Emergency help requested at {{address}}.",
+            "geoNotSupported": "Geolocation Not Supported",
+            "geoNotSupportedDesc": "Your browser does not support geolocation.",
+            "locationFailed": "Location Failed",
+            "locationFailedDesc": "Could not get your location for the SOS alert.",
+            "missingInfo": "Missing Information",
+            "missingInfoDesc": "Please fill in all required fields.",
+            "reportSubmitted": "Report Submitted",
+            "reportSubmittedDesc": "Authorities have been notified. Thank you for your help."
+        }
+    },
+    "reportPothole": {
+        "title": "Report Road Damage",
+        "subtitle": "Report potholes and road surface issues directly to maintenance.",
+        "cardTitle": "Pothole Details",
+        "cardDesc": "Where is the damage located?",
+        "locationLabel": "Location",
+        "locationPlaceholder": "e.g. Near Alkapuri Circle",
+        "severityLabel": "Severity",
+        "severityPlaceholder": "Select severity...",
+        "severities": {
+            "low": "Low - Minor bump",
+            "medium": "Medium - Avoidable",
+            "high": "High - Dangerous / Deep"
+        },
+        "descriptionLabel": "Description",
+        "descriptionPlaceholder": "Describe the size and position...",
+        "photoLabel": "Photo Evidence (Optional)",
+        "photoUpload": "Click to upload photo",
+        "submitReport": "Submit Report",
+        "sending": "Sending...",
+        "tipsTitle": "Road Safety Tips",
+        "tips": {
+            "tip1": "Do not swerve suddenly to avoid potholes.",
+            "tip2": "Slow down before hitting a pothole.",
+            "tip3": "Check your tire pressure regularly."
+        },
+        "successTitle": "Report Received!",
+        "successDesc": "Thank you for helping keep our roads safe.",
+        "reportAnother": "Report Another Issue",
+        "toasts": {
+            "missingInfo": "Missing Information",
+            "missingInfoDesc": "Please fill in all required fields.",
+            "success": "Pothole Reported",
+            "successDesc": "The road maintenance team has been notified."
+        }
+    },
+    "landing": {
+        "nav": {
+            "challenge": "The Challenge",
+            "solutions": "Solutions",
+            "login": "Login"
+        },
+        "hero": {
+            "title": "Predicting the pulse of",
+            "titleAccent": "Urban Mobility.",
+            "description": "Transforming outdated traffic infrastructure into an intelligent, responsive ecosystem that eliminates gridlock and saves lives.",
+            "launch": "Launch Platform"
+        },
+        "challenge": {
+            "title": "The Challenge",
+            "subtitle": "Modern cities are still running on outdated infrastructure that cannot keep up with growing vehicle density.",
+            "problems": {
+                "fixed": {
+                    "title": "Fixed Signal Cycles",
+                    "desc": "Lights change on a timer, not based on demand, causing unnecessary stops when roads are empty."
+                },
+                "unfair": {
+                    "title": "Unfair Distribution",
+                    "desc": "Preprogrammed systems fail to balance uneven traffic loads, leading to massive build-ups in peak hours."
+                },
+                "gridlock": {
+                    "title": "Emergency Gridlock",
+                    "desc": "Ambulances and fire trucks get stuck in static traffic waves due to a lack of priority routing."
+                },
+                "coordination": {
+                    "title": "Lack of Coordination",
+                    "desc": "Isolated intersections do not talk to each other, creating 'stop-and-go' patterns across city sectors."
+                }
+            }
+        },
+        "solutions": {
+            "title": "Our Intelligent Solution",
+            "subtitle": "FlowMasters replaces static timers with dynamic, AI-driven coordination.",
+            "features": {
+                "dynamic": {
+                    "title": "Dynamic Signal Control",
+                    "desc": "Multi-agent optimization allows signals to learn and coordinate across multi-junction networks, eliminating 'empty road' greens and reducing wait times by up to 30%.",
+                    "tag": "Responsive AI"
+                },
+                "predictive": {
+                    "title": "Predictive Analytics",
+                    "desc": "Analyzes historical flow patterns to anticipate congestion before it happens, allowing for proactive adjustments.",
+                    "tag": "Forecasting"
+                },
+                "corridors": {
+                    "title": "Emergency Green Corridors",
+                    "desc": "Automatically clears a path for emergency vehicles by pulsing signals ahead of their arrival.",
+                    "tag": "Safety"
+                },
+                "enforcement": {
+                    "title": "Automated Enforcement",
+                    "desc": "Identifies violations like signal jumping and wrong-way driving automatically, improving discipline and pedestrian safety.",
+                    "tag": "Compliance"
+                }
+            }
+        },
+        "footer": "FlowMasters • Intelligent Mobility Ecosystem"
+    }
+}
