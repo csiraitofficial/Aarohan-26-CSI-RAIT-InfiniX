@@ -115,9 +115,9 @@ export interface Alert {
 export const mockTrafficSignals: TrafficSignal[] = [
     {
         id: 'SIG-001',
-        name: 'Master Canteen Square',
-        location: 'Master Canteen, Bhubaneswar',
-        coordinates: [20.2667, 85.8428],
+        name: 'Nerul Station Square',
+        location: 'Nerul East, Navi Mumbai',
+        coordinates: [19.0330, 73.0297],
         status: 'operational',
         currentPhase: 'green',
         timings: { redDuration: 60, yellowDuration: 5, greenDuration: 45 },
@@ -128,9 +128,9 @@ export const mockTrafficSignals: TrafficSignal[] = [
     },
     {
         id: 'SIG-002',
-        name: 'Jayadev Vihar Square',
-        location: 'Jayadev Vihar, Bhubaneswar',
-        coordinates: [20.2913, 85.8166],
+        name: 'LP Junction',
+        location: 'Nerul, Navi Mumbai',
+        coordinates: [19.0422, 73.0205],
         status: 'operational',
         currentPhase: 'red',
         timings: { redDuration: 55, yellowDuration: 5, greenDuration: 50 },
@@ -141,9 +141,9 @@ export const mockTrafficSignals: TrafficSignal[] = [
     },
     {
         id: 'SIG-003',
-        name: 'Rasulgarh Square',
-        location: 'Rasulgarh, Bhubaneswar',
-        coordinates: [20.2644, 85.8281],
+        name: 'Nerul Gymkhana Road',
+        location: 'Nerul West, Navi Mumbai',
+        coordinates: [19.0285, 73.0182],
         status: 'warning',
         currentPhase: 'yellow',
         timings: { redDuration: 65, yellowDuration: 5, greenDuration: 40 },
@@ -154,9 +154,9 @@ export const mockTrafficSignals: TrafficSignal[] = [
     },
     {
         id: 'SIG-004',
-        name: 'Patia Square',
-        location: 'Patia, Bhubaneswar',
-        coordinates: [20.3553, 85.8197],
+        name: 'Seawoods Grand Central',
+        location: 'Seawoods, Navi Mumbai',
+        coordinates: [19.0210, 73.0180],
         status: 'offline',
         currentPhase: 'red',
         timings: { redDuration: 60, yellowDuration: 5, greenDuration: 45 },
@@ -167,9 +167,9 @@ export const mockTrafficSignals: TrafficSignal[] = [
     },
     {
         id: 'SIG-005',
-        name: 'Vani Vihar Square',
-        location: 'Vani Vihar, Bhubaneswar',
-        coordinates: [20.2961, 85.8245],
+        name: 'DY Patil Stadium North',
+        location: 'Nerul, Navi Mumbai',
+        coordinates: [19.0440, 73.0270],
         status: 'operational',
         currentPhase: 'green',
         timings: { redDuration: 50, yellowDuration: 5, greenDuration: 55 },
@@ -180,9 +180,9 @@ export const mockTrafficSignals: TrafficSignal[] = [
     },
     {
         id: 'SIG-006',
-        name: 'Kalpana Square',
-        location: 'Kalpana, Bhubaneswar',
-        coordinates: [20.2812, 85.8352],
+        name: 'Palm Beach Road Exit',
+        location: 'Nerul Node, Navi Mumbai',
+        coordinates: [19.0180, 73.0220],
         status: 'operational',
         currentPhase: 'red',
         timings: { redDuration: 70, yellowDuration: 5, greenDuration: 35 },
@@ -193,9 +193,9 @@ export const mockTrafficSignals: TrafficSignal[] = [
     },
     {
         id: 'SIG-007',
-        name: 'Acharya Vihar Square',
-        location: 'Acharya Vihar, Bhubaneswar',
-        coordinates: [20.3089, 85.8156],
+        name: 'Shiravane Chowk',
+        location: 'Nerul, Navi Mumbai',
+        coordinates: [19.0480, 73.0250],
         status: 'operational',
         currentPhase: 'green',
         timings: { redDuration: 55, yellowDuration: 5, greenDuration: 50 },
@@ -206,9 +206,9 @@ export const mockTrafficSignals: TrafficSignal[] = [
     },
     {
         id: 'SIG-008',
-        name: 'Nayapalli Square',
-        location: 'Nayapalli, Bhubaneswar',
-        coordinates: [20.2889, 85.8089],
+        name: 'Nerul Sector 10 Junction',
+        location: 'Nerul, Navi Mumbai',
+        coordinates: [19.0380, 73.0350],
         status: 'maintenance',
         currentPhase: 'yellow',
         timings: { redDuration: 60, yellowDuration: 5, greenDuration: 45 },
@@ -228,10 +228,10 @@ export const mockOfficers: Officer[] = [
         rank: 'Inspector',
         status: 'on-duty',
         location: {
-            coordinates: [20.2667, 85.8428],
-            area: 'Master Canteen'
+            coordinates: [19.0330, 73.0297],
+            area: 'Nerul Station'
         },
-        assignment: 'Traffic Control - Master Canteen',
+        assignment: 'Traffic Control - Nerul',
         shift: { start: '08:00', end: '16:00' },
         contact: { phone: '+91-9876543210', radio: 'CH-1' },
         performance: {
@@ -248,8 +248,8 @@ export const mockOfficers: Officer[] = [
         rank: 'Sub-Inspector',
         status: 'deployed',
         location: {
-            coordinates: [20.2913, 85.8166],
-            area: 'Jayadev Vihar'
+            coordinates: [19.0422, 73.0205],
+            area: 'LP Junction'
         },
         assignment: 'Incident Response - INC-003',
         shift: { start: '08:00', end: '16:00' },
@@ -268,10 +268,10 @@ export const mockOfficers: Officer[] = [
         rank: 'Constable',
         status: 'on-duty',
         location: {
-            coordinates: [20.2644, 85.8281],
-            area: 'Rasulgarh'
+            coordinates: [19.0285, 73.0182],
+            area: 'Nerul West'
         },
-        assignment: 'Patrol - Rasulgarh Zone',
+        assignment: 'Patrol - Nerul Zone',
         shift: { start: '08:00', end: '16:00' },
         contact: { phone: '+91-9876543212', radio: 'CH-2' },
         performance: {
@@ -288,8 +288,8 @@ export const mockOfficers: Officer[] = [
         rank: 'Head Constable',
         status: 'break',
         location: {
-            coordinates: [20.2812, 85.8352],
-            area: 'Kalpana Square'
+            coordinates: [19.0180, 73.0220],
+            area: 'Palm Beach'
         },
         shift: { start: '08:00', end: '16:00' },
         contact: { phone: '+91-9876543213', radio: 'CH-2' },
@@ -307,10 +307,10 @@ export const mockOfficers: Officer[] = [
         rank: 'Inspector',
         status: 'on-duty',
         location: {
-            coordinates: [20.3089, 85.8156],
-            area: 'Acharya Vihar'
+            coordinates: [19.0440, 73.0270],
+            area: 'DY Patil'
         },
-        assignment: 'Traffic Control - Acharya Vihar',
+        assignment: 'Traffic Control - DY Patil',
         shift: { start: '16:00', end: '00:00' },
         contact: { phone: '+91-9876543214', radio: 'CH-3' },
         performance: {
@@ -327,8 +327,8 @@ export const mockOfficers: Officer[] = [
         rank: 'Sub-Inspector',
         status: 'off-duty',
         location: {
-            coordinates: [20.2889, 85.8089],
-            area: 'Nayapalli'
+            coordinates: [19.0480, 73.0250],
+            area: 'Shiravane'
         },
         shift: { start: '00:00', end: '08:00' },
         contact: { phone: '+91-9876543215', radio: 'CH-3' },
@@ -349,9 +349,9 @@ export const mockIncidents: Incident[] = [
         severity: 'high',
         status: 'in-progress',
         location: {
-            coordinates: [20.2913, 85.8166],
-            address: 'Jayadev Vihar Square, Near KIIT University',
-            landmark: 'Jayadev Vihar Square'
+            coordinates: [19.0544, 72.8402],
+            address: 'Bandra West Terminal, SV Road',
+            landmark: 'Bandra West'
         },
         reportedBy: 'Citizen - Sarah Connor',
         reportedAt: new Date(Date.now() - 1200000).toISOString(),
@@ -372,9 +372,9 @@ export const mockIncidents: Incident[] = [
         severity: 'medium',
         status: 'assigned',
         location: {
-            coordinates: [20.2644, 85.8281],
-            address: 'Rasulgarh Square, Main Road',
-            landmark: 'Rasulgarh Square'
+            coordinates: [19.0253, 72.8203],
+            address: 'Worli Sea Link Entrance, NH-8',
+            landmark: 'Worli entrance'
         },
         reportedBy: 'Officer - Amit Patel',
         reportedAt: new Date(Date.now() - 600000).toISOString(),
@@ -394,9 +394,9 @@ export const mockIncidents: Incident[] = [
         severity: 'critical',
         status: 'reported',
         location: {
-            coordinates: [20.2667, 85.8428],
-            address: 'Master Canteen Square, NH-16',
-            landmark: 'Master Canteen'
+            coordinates: [19.0330, 73.0297],
+            address: 'Nerul Station Road',
+            landmark: 'Nerul East'
         },
         reportedBy: 'Control Room',
         reportedAt: new Date(Date.now() - 300000).toISOString(),
@@ -414,9 +414,9 @@ export const mockIncidents: Incident[] = [
         severity: 'low',
         status: 'resolved',
         location: {
-            coordinates: [20.2812, 85.8352],
-            address: 'Kalpana Square, Market Area',
-            landmark: 'Kalpana Square'
+            coordinates: [19.0210, 73.0180],
+            address: 'Seawoods Station Road',
+            landmark: 'Seawoods Grand Central'
         },
         reportedBy: 'Officer - Sunita Rao',
         reportedAt: new Date(Date.now() - 7200000).toISOString(),
@@ -438,10 +438,10 @@ export const mockExtendedViolations: ViolationExtended[] = [
     {
         id: 'VIO-001',
         type: 'speeding',
-        vehicleNo: 'OD-02-AB-1234',
+        vehicleNo: 'MH-01-AB-1234',
         vehicleType: 'car',
-        location: 'Master Canteen Square',
-        coordinates: [20.2667, 85.8428],
+        location: 'Nerul East Junction',
+        coordinates: [19.0330, 73.0297],
         timestamp: new Date(Date.now() - 3600000).toISOString(),
         detectedBy: 'camera',
         evidence: {
@@ -455,10 +455,10 @@ export const mockExtendedViolations: ViolationExtended[] = [
     {
         id: 'VIO-002',
         type: 'helmet',
-        vehicleNo: 'OD-05-XY-9876',
+        vehicleNo: 'MH-02-XY-9876',
         vehicleType: 'bike',
-        location: 'Jayadev Vihar Square',
-        coordinates: [20.2913, 85.8166],
+        location: 'Bandra West Terminal',
+        coordinates: [19.0544, 72.8402],
         timestamp: new Date(Date.now() - 7200000).toISOString(),
         detectedBy: 'officer',
         officerId: 'OFF-002',
@@ -471,17 +471,17 @@ export const mockExtendedViolations: ViolationExtended[] = [
         paidDate: new Date(Date.now() - 3600000).toISOString(),
         driverDetails: {
             name: 'Rahul Verma',
-            license: 'OD0520230012345',
+            license: 'MH0220230012345',
             phone: '+91-9988776655'
         }
     },
     {
         id: 'VIO-003',
         type: 'signal-jump',
-        vehicleNo: 'OD-33-ZZ-5555',
+        vehicleNo: 'MH-03-ZZ-5555',
         vehicleType: 'auto',
-        location: 'Rasulgarh Square',
-        coordinates: [20.2644, 85.8281],
+        location: 'Worli Sea Link Entrance',
+        coordinates: [19.0253, 72.8203],
         timestamp: new Date(Date.now() - 10800000).toISOString(),
         detectedBy: 'camera',
         evidence: {
@@ -495,10 +495,10 @@ export const mockExtendedViolations: ViolationExtended[] = [
     {
         id: 'VIO-004',
         type: 'seatbelt',
-        vehicleNo: 'OD-03-MN-4567',
+        vehicleNo: 'MH-04-MN-4567',
         vehicleType: 'car',
-        location: 'Patia Square',
-        coordinates: [20.3553, 85.8197],
+        location: 'Marine Drive North',
+        coordinates: [18.9438, 72.8236],
         timestamp: new Date(Date.now() - 14400000).toISOString(),
         detectedBy: 'officer',
         officerId: 'OFF-001',
@@ -510,17 +510,17 @@ export const mockExtendedViolations: ViolationExtended[] = [
         issuedDate: new Date(Date.now() - 14000000).toISOString(),
         driverDetails: {
             name: 'Anjali Mishra',
-            license: 'OD0320230098765',
+            license: 'MH0420230098765',
             phone: '+91-9876543200'
         }
     },
     {
         id: 'VIO-005',
         type: 'wrong-way',
-        vehicleNo: 'OD-07-PQ-7890',
+        vehicleNo: 'MH-05-PQ-7890',
         vehicleType: 'bike',
-        location: 'Kalpana Square',
-        coordinates: [20.2812, 85.8352],
+        location: 'Dadar Station Square',
+        coordinates: [19.0178, 72.8478],
         timestamp: new Date(Date.now() - 5400000).toISOString(),
         detectedBy: 'camera',
         evidence: {
@@ -532,10 +532,10 @@ export const mockExtendedViolations: ViolationExtended[] = [
     {
         id: 'VIO-006',
         type: 'mobile-use',
-        vehicleNo: 'OD-02-RS-3456',
+        vehicleNo: 'MH-02-RS-3456',
         vehicleType: 'car',
-        location: 'Vani Vihar Square',
-        coordinates: [20.2961, 85.8245],
+        location: 'Bandra West Terminal',
+        coordinates: [19.0544, 72.8402],
         timestamp: new Date(Date.now() - 1800000).toISOString(),
         detectedBy: 'officer',
         officerId: 'OFF-005',
@@ -547,7 +547,7 @@ export const mockExtendedViolations: ViolationExtended[] = [
         issuedDate: new Date(Date.now() - 1700000).toISOString(),
         driverDetails: {
             name: 'Suresh Nayak',
-            license: 'OD0220230045678',
+            license: 'MH0220230045678',
             phone: '+91-9123456789'
         }
     }
@@ -559,8 +559,8 @@ export const mockAlerts: Alert[] = [
         id: 'ALT-001',
         type: 'incident',
         priority: 'high',
-        message: 'Accident reported at Jayadev Vihar Square - 2 vehicles involved',
-        location: 'Jayadev Vihar Square',
+        message: 'Accident reported at Bandra West Terminal - 2 vehicles involved',
+        location: 'Bandra West Terminal',
         timestamp: new Date(Date.now() - 1200000).toISOString(),
         read: false
     },
@@ -568,8 +568,8 @@ export const mockAlerts: Alert[] = [
         id: 'ALT-002',
         type: 'congestion',
         priority: 'medium',
-        message: 'Heavy traffic detected at Rasulgarh Square - Density: 9.1',
-        location: 'Rasulgarh Square',
+        message: 'Heavy traffic detected at Worli Sea Link - Density: 9.1',
+        location: 'Worli Sea Link Entrance',
         timestamp: new Date(Date.now() - 900000).toISOString(),
         read: false
     },
@@ -577,8 +577,8 @@ export const mockAlerts: Alert[] = [
         id: 'ALT-003',
         type: 'system',
         priority: 'critical',
-        message: 'Signal offline at Patia Square - Manual control required',
-        location: 'Patia Square',
+        message: 'Signal offline at Marine Drive - Manual control required',
+        location: 'Marine Drive North',
         timestamp: new Date(Date.now() - 3600000).toISOString(),
         read: true
     },
@@ -586,8 +586,8 @@ export const mockAlerts: Alert[] = [
         id: 'ALT-004',
         type: 'violation',
         priority: 'low',
-        message: 'Speeding violation detected - OD-02-AB-1234 at 85 km/h',
-        location: 'Master Canteen Square',
+        message: 'Speeding violation detected - MH-01-AB-1234 at 85 km/h',
+        location: 'BKC Junction',
         timestamp: new Date(Date.now() - 3600000).toISOString(),
         read: true
     },
@@ -595,7 +595,7 @@ export const mockAlerts: Alert[] = [
         id: 'ALT-005',
         type: 'weather',
         priority: 'medium',
-        message: 'Heavy rain expected in 2 hours - Prepare for reduced visibility',
+        message: 'Heavy rain expected in Nerul - Prepare for reduced visibility',
         timestamp: new Date(Date.now() - 600000).toISOString(),
         read: false
     }
@@ -673,7 +673,11 @@ export const TrafficDataStore = {
 
     loadIncidents: (): Incident[] => {
         const data = localStorage.getItem('traffic_incidents');
-        return data ? JSON.parse(data) : mockIncidents;
+        if (data === null) {
+            TrafficDataStore.saveIncidents(mockIncidents || []);
+            return mockIncidents || [];
+        }
+        return JSON.parse(data);
     },
 
     saveViolations: (violations: ViolationExtended[]) => {
@@ -691,7 +695,19 @@ export const TrafficDataStore = {
 
     loadAlerts: (): Alert[] => {
         const data = localStorage.getItem('traffic_alerts');
-        return data ? JSON.parse(data) : mockAlerts;
+        if (data === null) {
+            TrafficDataStore.saveAlerts(mockAlerts || []);
+            return mockAlerts || [];
+        }
+        return JSON.parse(data);
+    },
+
+    clearAlerts: () => {
+        TrafficDataStore.saveAlerts([]);
+    },
+
+    clearIncidents: () => {
+        TrafficDataStore.saveIncidents([]);
     },
 
     clearAll: () => {

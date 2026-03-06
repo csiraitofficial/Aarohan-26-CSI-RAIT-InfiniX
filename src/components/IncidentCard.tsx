@@ -130,12 +130,12 @@ export default function IncidentCard({ incident, onAssignOfficer, onUpdateStatus
                 </div>
 
                 {/* Actions */}
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                     {incident.status === 'reported' && (
                         <Button
                             size="sm"
                             variant="outline"
-                            className="flex-1 h-8 text-xs"
+                            className="flex-1 h-8 text-xs min-w-[120px]"
                             onClick={() => onAssignOfficer?.(incident.id)}
                         >
                             <Users className="h-3 w-3 mr-1" />
@@ -146,7 +146,7 @@ export default function IncidentCard({ incident, onAssignOfficer, onUpdateStatus
                         <Button
                             size="sm"
                             variant="default"
-                            className="flex-1 h-8 text-xs"
+                            className="flex-1 h-8 text-xs min-w-[120px]"
                             onClick={() => onUpdateStatus?.(incident.id, 'resolved')}
                         >
                             <CheckCircle className="h-3 w-3 mr-1" />
@@ -156,11 +156,27 @@ export default function IncidentCard({ incident, onAssignOfficer, onUpdateStatus
                     <Button
                         size="sm"
                         variant="outline"
-                        className="flex-1 h-8 text-xs"
+                        className="flex-1 h-8 text-xs min-w-[100px]"
                         onClick={() => onViewDetails?.(incident.id)}
                     >
                         {t("incidents.viewDetails")}
                     </Button>
+
+                    {incident.location.coordinates && (
+                        <Button
+                            size="sm"
+                            variant="outline"
+                            className="flex-1 h-8 text-xs border-primary/20 hover:bg-primary/10 min-w-[140px]"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                const [lat, lng] = incident.location.coordinates;
+                                window.open(`https://www.google.com/maps?q=${lat},${lng}`, '_blank');
+                            }}
+                        >
+                            <img src="https://www.google.com/s2/favicons?domain=maps.google.com" className="h-3 w-3 mr-1" alt="" />
+                            {t("incidents.viewOnGoogleMap")}
+                        </Button>
+                    )}
                 </div>
 
                 {/* Notes */}

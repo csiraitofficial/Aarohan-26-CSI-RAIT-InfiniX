@@ -12,10 +12,11 @@ interface AlertFeedProps {
     onMarkAsRead?: (alertId: string) => void;
     onDismiss?: (alertId: string) => void;
     onViewMap?: (coordinates: [number, number]) => void;
+    onClearAll?: () => void;
     maxHeight?: string;
 }
 
-export default function AlertFeed({ alerts, onMarkAsRead, onDismiss, onViewMap, maxHeight = "400px" }: AlertFeedProps) {
+export default function AlertFeed({ alerts, onMarkAsRead, onDismiss, onViewMap, onClearAll, maxHeight = "400px" }: AlertFeedProps) {
     const { t } = useTranslation();
 
     const getPriorityColor = (priority: string) => {
@@ -88,10 +89,26 @@ export default function AlertFeed({ alerts, onMarkAsRead, onDismiss, onViewMap, 
                     <Bell className="h-5 w-5 text-primary" />
                     <h3 className="font-semibold">{t("alerts.title")}</h3>
                 </div>
-                <Badge variant="outline" className="gap-1">
-                    <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                    {alerts.filter(a => !a.read).length} {t("alerts.new")}
-                </Badge>
+                <div className="flex items-center gap-2">
+                    <Badge variant="outline" className="gap-1">
+                        <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                        {alerts.filter(a => !a.read).length} {t("alerts.new")}
+                    </Badge>
+                    {onClearAll && alerts.length > 0 && (
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-7 text-[10px] text-muted-foreground hover:text-red-500 gap-1 px-2"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                onClearAll();
+                            }}
+                        >
+                            <X className="h-3 w-3" />
+                            {t("alerts.clearAll")}
+                        </Button>
+                    )}
+                </div>
             </div>
 
             <ScrollArea style={{ height: maxHeight }}>
@@ -147,19 +164,36 @@ export default function AlertFeed({ alerts, onMarkAsRead, onDismiss, onViewMap, 
                                             )}
                                         </div>
 
-                                        {alert.coordinates && onViewMap && (
-                                            <Button
-                                                size="sm"
-                                                variant="secondary"
-                                                className="mt-2 h-7 text-xs bg-primary/10 hover:bg-primary/20 text-primary border-primary/20"
-                                                onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    onViewMap(alert.coordinates!);
-                                                }}
-                                            >
-                                                <MapPin className="h-3 w-3 mr-1" />
-                                                {t("alerts.viewOnMap")}
-                                            </Button>
+                                        {alert.coordinates && (
+                                            <div className="flex gap-2 mt-2">
+                                                {onViewMap && (
+                                                    <Button
+                                                        size="sm"
+                                                        variant="secondary"
+                                                        className="h-7 text-xs bg-primary/10 hover:bg-primary/20 text-primary border-primary/20"
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            onViewMap(alert.coordinates!);
+                                                        }}
+                                                    >
+                                                        <MapPin className="h-3 w-3 mr-1" />
+                                                        {t("alerts.viewOnMap")}
+                                                    </Button>
+                                                )}
+                                                <Button
+                                                    size="sm"
+                                                    variant="outline"
+                                                    className="h-7 text-xs border-primary/20 hover:bg-primary/10"
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        const [lat, lng] = alert.coordinates!;
+                                                        window.open(`https://www.google.com/maps?q=${lat},${lng}`, '_blank');
+                                                    }}
+                                                >
+                                                    <img src="https://www.google.com/s2/favicons?domain=maps.google.com" className="h-3 w-3 mr-1" alt="" />
+                                                    {t("alerts.viewOnGoogleMap")}
+                                                </Button>
+                                            </div>
                                         )}
 
                                         <div className="flex items-center gap-3 mt-2">

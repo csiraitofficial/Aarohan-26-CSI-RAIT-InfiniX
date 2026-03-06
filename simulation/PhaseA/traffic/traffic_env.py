@@ -1,27 +1,3 @@
-#!/usr/bin/env python3
-"""
-traffic_env.py
-
-Multi-agent, vectorized traffic environment for the Sambalpur 15-signal network.
-Designed for MAPPO-style training, with Indian-traffic-inspired dynamics.
-
-Supports curriculum-style config via kwargs:
-- dynamic_demand (bool)
-- demand_variation_mode ("none" | "cyclic")
-- random_traffic_shocks (bool)
-- shock_probability (float)
-- bursty_release (bool)
-- spillback_penalty (float)
-- base_demand_level (float)
-- switch_penalty (float)
-- normalize_obs (bool)
-
-Default timings are chosen to be roughly in the Indian 60–90 s cycle band:
-- min_green = 20 s
-- max_green = 60 s
-- yellow_time = 3 s
-"""
-
 import json
 import math
 import random
@@ -45,9 +21,6 @@ def seed_everything(seed: int):
     np.random.seed(seed)
 
 
-# ---------------------------------------------------------
-# SambalpurNetwork: holds static graph from JSON
-# ---------------------------------------------------------
 
 class SambalpurNetwork:
     def __init__(self, json_path: str):
@@ -111,32 +84,7 @@ class SambalpurNetwork:
 # ---------------------------------------------------------
 
 class TrafficEnvCore:
-    """
-    Single Sambalpur-like city simulation.
-
-    Agents: each signal (S1..S15) is an agent.
-    Action per agent: 0 = keep phase, 1 = switch phase.
-
-    Config flags for curriculum phases:
-      - dynamic_demand: time-varying Poisson rate
-      - demand_variation_mode: "none" | "cyclic"
-      - random_traffic_shocks: occasional surges (Indian-style chaos)
-      - shock_probability: per-step probability of shock
-      - bursty_release: higher discharge early in green after long red
-      - spillback_penalty: weight in reward for queues > capacity
-      - switch_penalty: small penalty per switch to discourage thrashing
-      - base_demand_level: overall demand scale
-      - normalize_obs: scale obs features to nicer ranges
-
-    Observation per signal (7-d vector):
-        0: queue_N (possibly normalized)
-        1: queue_E
-        2: queue_S
-        3: queue_W
-        4: current_phase (0 or 1)
-        5: time_in_phase / max_green
-        6: predicted_arrivals_next_10s (possibly normalized)
-    """
+    
 
     def __init__(self,
                  network: SambalpurNetwork,
@@ -428,10 +376,7 @@ class TrafficEnvCore:
 # ---------------------------------------------------------
 
 class VectorizedTrafficEnv:
-    """
-    Vectorized wrapper over multiple TrafficEnvCore instances.
-    Allows passing phase-specific kwargs into each core env.
-    """
+    
 
     def __init__(self,
                  json_path: str,

@@ -11,6 +11,11 @@ import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Monitoring from "./pages/Monitoring";
+import Analytics from "./pages/Analytics";
+import SimulationNew from "./pages/SimulationNew";
+import SimulationTier1 from "./pages/SimulationTier1";
+import SimulationTier2 from "./pages/SimulationTier2";
+import SimulationComparison from "./pages/SimulationComparison";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +37,11 @@ const App = () => (
               <Route path="/login" element={<Login />} />
               <Route path="/dashboard" element={<ProtectedRoute><Layout><Dashboard /></Layout></ProtectedRoute>} />
               <Route path="/monitoring" element={<ProtectedRoute><Layout><Monitoring /></Layout></ProtectedRoute>} />
+              <Route path="/analytics" element={<ProtectedRoute><Layout><Analytics /></Layout></ProtectedRoute>} />
+              <Route path="/simulation-new" element={<ProtectedRoute><Layout><SimulationNew /></Layout></ProtectedRoute>} />
+              <Route path="/simulation-tier1" element={<ProtectedRoute><Layout><SimulationTier1 /></Layout></ProtectedRoute>} />
+              <Route path="/simulation-tier2" element={<ProtectedRoute><Layout><SimulationTier2 /></Layout></ProtectedRoute>} />
+              <Route path="/simulation-comparison" element={<ProtectedRoute><Layout><SimulationComparison /></Layout></ProtectedRoute>} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

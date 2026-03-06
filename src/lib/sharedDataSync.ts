@@ -5,8 +5,10 @@
  * (mobile, laptop, etc.) share the same data.
  */
 
+import { API_CONFIG } from "./apiConfig";
+
 // Use relative URLs so they go through Vite proxy (works with ngrok)
-const API_BASE = "";
+const API_BASE = API_CONFIG.SIMULATION;
 
 
 export interface SharedIncident {
@@ -94,6 +96,21 @@ export async function deleteIncident(incidentId: string): Promise<boolean> {
 }
 
 /**
+ * Clear all incidents from the server
+ */
+export async function clearAllIncidents(): Promise<boolean> {
+    try {
+        const res = await fetch(`${API_BASE}/api/incidents`, {
+            method: "DELETE",
+        });
+        return res.ok;
+    } catch (e) {
+        console.error("Failed to clear all incidents:", e);
+        return false;
+    }
+}
+
+/**
  * Fetch all alerts from the server
  */
 export async function fetchAlerts(): Promise<SharedAlert[]> {
@@ -151,6 +168,21 @@ export async function deleteAlert(alertId: string): Promise<boolean> {
         return res.ok;
     } catch (e) {
         console.error("Failed to delete alert:", e);
+        return false;
+    }
+}
+
+/**
+ * Clear all alerts from the server
+ */
+export async function clearAllAlerts(): Promise<boolean> {
+    try {
+        const res = await fetch(`${API_BASE}/api/alerts`, {
+            method: "DELETE",
+        });
+        return res.ok;
+    } catch (e) {
+        console.error("Failed to clear all alerts:", e);
         return false;
     }
 }
